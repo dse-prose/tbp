@@ -119,7 +119,7 @@ nav a:hover {
 #project h1 {
     font-size: 3.5em;
 }
-#project h1:first-child, #biblio h1:first-child, #tei-encoding h1:first-child {
+#project h1:first-child, #biblio h1:first-child, #tei-encoding h1:first-child, #main-doc h1:first-child {
     padding-top: 3em;
 }
 #project ul:last-child {
@@ -189,7 +189,6 @@ footer .row {
 #main-doc {
     display: grid;
     grid-template-columns: 20% 80%;
-    padding-top: var(--nav-height);
     height: 100vh;
 }
 #sidebar {
@@ -224,9 +223,6 @@ footer .row {
 #doc-body {
     overflow-y: scroll;
     scroll-behavior: smooth;
-}
-#doc-body h1 {
-    padding-top: 1em;
 }
 #doc-body h2 {
     padding-top: 2.5em
