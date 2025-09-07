@@ -191,6 +191,10 @@ footer .row {
     grid-template-columns: 20% 80%;
     height: 100vh;
 }
+.grid-container-enc {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
 #sidebar {
     height: 100vh;
 }
