@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Judson:ital,wght@0,400;0,700;1,400&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Quattrocento:wght@400;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Judson:ital,wght@0,400;0,700;1,400&family=Noticia+Text:ital,wght@0,400;0,700;1,400;1,700&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Quattrocento:wght@400;700&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&display=swap');
+@media screen and (orientation: portrait) {
+    #cover {
+        grid-template-columns: 5% 90% 5%;
+    }
+    .cover-title {
+        font-size: 6em !important;
+    }
+    #cover-subtitle h1 {
+        font-size: 4em !important;
+        margin-top: 2em !important;
+    }
+    p, ul {
+        font-size: small !important;
+    }
+}
+:root {
+    /* --body-primary: rgba(134, 118, 103, 0.3); */
+    --body-secondary: #0e1b1d;
+    --body-primary: rgba(134, 118, 103, 0.3);
+    --body-secondary-light: #40505333;
+    --body-complementary-light: rgba(52, 32, 30, 0.8);
+    --body-complementary: rgb(47, 24, 21);
+    --nav-height: 7vh;
+}
+body {
+    /* background-color: white; */
+    font-family: 'Quattrocento', serif;
+    letter-spacing: 1px;
+    overflow-x: hidden;
+    background-color: white;
+}
+a {
+    cursor: pointer;
+    color: var(--body-complementary-light);
+    /* text-decoration: underline; */
+}
+a:hover {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--body-complementary-light);
+}
+p {
+    text-align: justify;
+}
+h1 {
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
+h2 {
+    padding-top: 1em;
+}
+h3 {
+    padding-top: 0.5em;
+}
+nav, nav.colored {
+    background-color: var(--body-secondary);
+    height: var(--nav-height);
+    /* filter: drop-shadow(0px 0px 10px rgba(255,255,255,.5)) */
+    box-shadow: 0 4px 5px -5px var(--body-secondary);
+}
+nav.colored .nav-link, nav.colored .navbar-brand {
+    color: white;
+    text-decoration: none;
+}
+nav .nav-link:hover {
+    color: whitesmoke;
+}
+.dropdown-item {
+    color: var(--body-secondary)
+}
+.dropdown-item:hover {
+    background-color: rgba(134, 118, 103, 0.5);
+}
+.dropdown-menu-end {
+    right: 0;
+    left: auto;
+}
+.grid-container {
+    display: grid;
+}
+#index-container {
+    scroll-behavior: smooth;
+}
+#cover {
+    height: 100vh;
+    background-color: var(--body-secondary);
+    background-image: url("/images/grammar_allegory.jpg");
+    background-size: cover;
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    padding: 0;
+}
+#cover-overlay {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(14, 27, 29, 0.7);
+    padding: 0;
+}
+.cover-title {
+    padding-top: 25vh;
+}
+.cover-title p {
+    font-family: 'Quattrocento+Sans';
+    text-align: center;
+    font-size: 5em;
+    color: white;
+}
+#cover-subtitle {
+    font-family: 'Quattrocento';
+    font-size: 2em;
+    color: white;
+    text-align: center;
+}
+.title-highlight {
+    font-weight: bold;
+}
+#project {
+    height: fit-content;
+}
+#project h1, #project h2 {
+    font-family: 'Quattrocento';
+    color: var(--body-secondary);
+}
+#project h1 {
+    font-size: 3.5em;
+}
+#project h1:first-child, #biblio h1:first-child, #tei-encoding h1:first-child {
+    padding-top: 3em;
+}
+#project ul:last-child {
+    padding-bottom: 6em;
+}
+#banner-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1em;
+}
+#note-banner, #biblio-banner {
+    /* width: 45%; */
+    height: 15em;
+    background-color: var(--body-secondary-light);
+    border-radius: 5px;
+    padding: 2em;
+    position: relative;
+    transition: background-color 0.3s ease-in;
+}
+#note-banner > p, #biblio-banner > p {
+    position:absolute;
+    color: black;
+    margin-right: 1.5em;
+}
+#note-banner:hover, #biblio-banner:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+#footer {
+    height: max-content;
+    background-color: var(--body-secondary-light);
+    margin-top: 2em;
+}
+footer .row {
+    padding: 0;
+}
+#footer-title {
+    padding-bottom: 0.2rem;
+    font-family: 'Quattrocento+Sans';
+    font-size: larger;
+}
+#footer p, #footer ul {
+    padding: 2.5rem 2rem;
+}
+#footer li {
+    list-style-type: none;
+}
+#footer a {
+    color: rgba(52, 32, 30, 0.8);
+    font-weight: 400;
+    transition: color 0.3 ease-in;
+}
+#footer a:hover {
+    color: var(--body-complementary);
+    text-decoration: none;
+    font-weight: bold;
+}
+#footer i {
+    padding-right: 0.5rem;
+    color: var(--body-complementary-light);
+}
+/*----------encoding and mockup-----------*/
+.grid-container-doc {
+    display: grid;
+    height: 100vh;
+    overflow-y: hidden;
+}
+#main-doc {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding-top: var(--nav-height);
+    height: 100vh;
+}
+#sidebar {
+    height: 100vh;
+}
+#encoding-link, #prototype-link, #features-link {
+    display: flex;
+    position: relative;
+    top: 30%;
+    padding: 1em;
+    padding-left: 0.5em;
+    border-radius: 0 50% 50% 0;
+    background-color: #0e1b1d;
+    color: white;
+    margin-top: 2em;
+    width: 3em;
+    transition: width 0.4s ease-in, border-radius 0.4s ease-in;
+}
+#encoding-link:hover, #prototype-link:hover, #features-link:hover {
+    width: 7em;
+    border-radius: 0 10% 10% 0;
+}
+#download a {
+    background-color: var(--body-secondary);
+    border-radius: 5px;
+    padding: 10px;
+    width: 14em;
+    margin-top: 2em;
+    color: white;
+    text-align: center;
+}
+#doc-body {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+}
+#doc-body h1 {
+    padding-top: 1em;
+}
+#doc-body h2 {
+    padding-top: 2.5em
+}
+.xml-code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: smaller;
+}
+.transpo-xml {
+    background-color: rgba(128, 0, 128, 0.2);
+    background-color: rgba(255, 255, 0, 0.5);
+}
+#main-doc #footer {
+    background-color: white;
+    border-top: 1px solid var(--body-secondary);
+    margin-top: 3em;
+    padding-bottom: 1em;
+}
+.prototype-figure {
+    width: 70%;
+    margin-left: 15%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 0.5em;
+}
+.prototype-figure > img {
+    width: 100%;
+}
+.prototype-figure > figcaption {
+    font-size: small;
+    font-style: italic;
+    text-align: center;
+}
+#fig-container-1, #fig-container-2, #fig-container-3, #fig-container-4 {
+    display: flex;
+    margin-bottom: 2em;
+}
+#fig-container-1 figure, #fig-container-2 figure, #fig-container-3 figure, #fig-container-4 figure{
+    margin: 5px;
+    width: 50%;
+}
+#stop-press-img {
+    margin-bottom: 1em;
+}
+#fig-container-5, #fig-container-6,#fig-container-7 {
+    display: flex;
+    margin-bottom: 2em;
+}
+#fig-container-5 figure, #fig-container-6 figure, #fig-container-7 figure {
+    margin: 5px;
+    width: 50%;
+}
+#textual, #genetic, #intratextual {
+    padding-top: 4em;
+}
+.var-bg-style {
+    background-color: rgba(130, 184, 194, 0.5);
+    padding: 0.2em;
+}
+.para-font-style {
+    color: #950404;
+    font-weight: bold;
+}
+.strikethrough {
+    text-decoration: line-through;
+}
+.addition {
+    vertical-align: super;
+    font-size: smaller;
+}
+.elaboration-font-style {
+    color: #1c42b2;
+}
+.transpo-font-style {
+    color: #941cb2;
+}
+.omission-bg-style {
+    background-color: rgba(235, 12, 12, 0.5);
+    padding: 0.2em;
+}
+.addition-bg-style {
+    background-color: rgba(66, 177, 74, 0.5);
+    padding: 0.2em;
+}
+.transpo-bg-style {
+    background-color: rgba(148, 28, 178, 0.5);
+    padding: 0.2em;
+}
+.error-font-style {
+    color: rgb(235, 12, 12);
+    font-weight: bold;
+}
+.spc-font-style {
+    text-decoration: underline;
+    font-weight: bold;
+}
+/* Style for zoom hover */
+.prototype-figure {
+  position: relative;
+  cursor: zoom-in;
+}
+.prototype-figure img {
+  transition: 0.3s ease;
+}
+.prototype-figure:hover img {
+  opacity: 0.9;
+  transform: scale(1.02);
+}
+
+/* Modal Styles */
+#imgModal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+#imgModal img {
+  max-width: 100%;
+  max-height: 90%;
+  box-shadow: 0 0 15px #000;
+  justify-self: center;
+}
+
+#imgModal .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+/*----------Note-----------*/
+.grid-container-note {
+    display: grid;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+#main-note {
+    padding-top: var(--nav-height);
+}
+#main-note h1 {
+    padding-top: 1em;
+}
+#main-cred {
+    height: 70vh;
+    padding-top: var(--nav-height);
+}
