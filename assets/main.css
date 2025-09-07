@@ -86,7 +86,7 @@ nav .nav-link:hover {
 #cover {
     height: 100vh;
     background-color: var(--body-secondary);
-    background-image: url("/images/grammar_allegory.jpg");
+    background-image: url("images/grammar_allegory.jpg");
     background-size: cover;
     position: relative;
     display: grid;
