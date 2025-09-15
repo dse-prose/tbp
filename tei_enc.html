@@ -43,9 +43,9 @@
         <div class="grid-container-enc" id="tei-encoding">
             <div class="container col-md-8 px-5">
                 <h1>XML/TEI encoding</h1>
-                <!-- <h2 id="encoding"></h2> -->
+                <!--Introductory paragraph-->
                 <h3 id="structure">Structure</h3>
-                <p>Bembo's <i>Prose</i> is a dialogue, divided into three <b>books</b> that correspond to the three evenings - from 10 to 12 december 1502 - through which the conversation between Carlo Bembo, Ercole Strozzi, Giuliano de' Medici and Federigo Fregoso spans. Since the 1960 edition of the dialogue by Carlo Dionisotti, each of the books was further organized in <b>chapters</b>, which were adopted by subsequent editors. Finally, the critical edition by Claudio Vela added a subdivision of chapters into <b>commas</b>. These structural elements were encoded as follows:</p>
+                <p>Bembo's <i>Prose</i> is a dialogue, divided into three <b>books</b> that correspond to the three evenings - from 10 to 12 december 1502 - through which the conversation between Carlo Bembo, Ercole Strozzi, Giuliano de' Medici and Federigo Fregoso spans. Since the <a href="biblio.html" target="_blank">1960 edition of the dialogue by Carlo Dionisotti</a>, each of the books was further organized in <b>chapters</b>, which were adopted by subsequent editors. Finally, the critical edition by Claudio Vela added a subdivision of chapters into <b>commas</b>. These structural elements were encoded as follows:</p>
                 <table class="table table-hover table-responsive">
                     <tr>
                         <th>Feature</th>
@@ -71,7 +71,7 @@
                 <h3 id="representation">Representation</h3>
                 <p>This level involved the encoding of some of the visual features of the witnesses. Specifically, for each of the four witnesses, a <code>&lt;pb/&gt;</code> element has been used in order to mark the beginning of a new <b>page</b>, in combination with the attributes <code>@edRef</code>, to link the page to the related witness via the sigla defined in the <code>&lt;listWit&gt;</code> element, <code>@n</code> to specify the page number, designed as indicated below and, finally, a <code>@facs</code> to associate each page with the related image:<br>
                     <p>&lt;pb edRef="#witness" n=“WitnessPagenumber" facs=”Witness_Pagenumber”/&gt;</p>
-                <p>This visualization should also provide the possibility to align each <b>line</b> in the facsimiles with the corresponding line of the transcription. For this purpose, <code>&lt;lb/&gt</code> elements are used to mark the beginning of each line in the text or in the apparatus:
+                <p>In order to eventually provide a reconstruction of the text that also allows to align each <b>line</b> in the facsimiles with the corresponding line of the transcription, <code>&lt;lb/&gt</code> elements are used to mark the beginning of each line in the text or in the apparatus:
                     <p>&lt;lb edRef="#P"/&gt;</p>
                 </p>
                 <h3 id="content">Content</h3>
@@ -92,6 +92,20 @@
                 </p>
                 <p>The numerous <b>people</b> mentioned in the dialogue are encoded via the element <code>&lt;persName&gt;</code> (or with <code>&lt;rs&gt;</code> in case of referencing strings), which refers to the <code>xml:id</code> associated to <code>&lt;person&gt;</code> elements in the <code>&lt;teiHeader&gt;</code>. Together with a URI from <a href="https://viaf.org/en" target="_blank">VIAF</a> or <a href="https://www.wikidata.org/wiki/Wikidata:Main_Page" target="_blank">Wikidata</a>, when possible a link to the related resource from <a href="https://www.treccani.it/biografico/" target="_blank">Dizionario Biografico degli Italiani</a> has been provided through the <code>ref</code> attribute of the <code>&lt;persName&gt;</code> tag. Different <code>&lt;listPerson&gt;</code> elements have been provided in order to distinguish between characters of the dialogue, fictional and non-fictional characters, quoted authors.</p>
                 <p><b>Sample words</b> listed by the author for the exemplification of grammar rules are marked in the text as <code>&lt;span&gt;</code>, where <code>@ana</code> refers to the <code>@xml:id</code> of a <code>&lt;category&gt;</code> within a <code>&lt;taxonomy&gt;</code> defined in the <code>&lt;teiHeader&gt;</code> and <code>@type</code> refers to the visual features of the word enclosed between <code>&lt;span&gt;</code> tags, as recorded in Vela's critical edition («marked» for words printed/written in uppercase, «unmarked» otherwise). The taxonomy is organized in three main categories (Nome, Verbo, Avverbio), which match the overall organization of the third book and can be further defined by inner <code>&lt;category&gt;</code> elements.</p>
+                <p><pre>
+                &lt;span ana="#names" type="unmarked"&gt;Neri&lt;/quote&gt;<br/>
+                
+                &lt;!--Index of sample words--&gt;
+                &lt;taxonomy xml:id="subject_index"&gt;
+                    &lt;category xml:id="Nome"&gt;&lt;catDesc&gt;Names and related parts of speech&lt;/catDesc&gt;&lt;/category&gt;
+                        &lt;category xml:id="names"&gt;&lt;catDesc&gt;Proper and common names&lt;/catDesc&gt;&lt;/category&gt;
+                        &lt;category xml:id="adjectives"&gt;&lt;catDesc&gt;Adjectives&lt;/catDesc&gt;&lt;/category&gt;
+                        &lt;category xml:id="pronouns"&gt;&lt;catDesc&gt;Pronouns&lt;/catDesc&gt;&lt;/category&gt;
+                    &lt;category xml:id="Verbo"&gt;&lt;catDesc&gt;Verbs&lt;/catDesc&gt;&lt;/category&gt;
+                    &lt;category xml:id="Avverbio"&gt;&lt;catDesc&gt;Adverbs and related parts of speech&lt;/catDesc&gt;&lt;/category&gt;
+                &lt;/taxonomy&gt;
+                </pre>
+                </p>
                 <p id="variants">Finally, <b>variants</b> were encoded using the <a href="https://tei-c.org/release/doc/tei-p5-doc/en/html/TC.html#TCAPDE" target="_blank">double end-point attachment</a> method and an external apparatus, placed within a <code>&lt;standOff&gt;</code> element. <code>&lt;anchor&gt;</code> tags were used to indicate the start and end points of variants within the base-text. The resulting XML/TEI document is thus structured as follows:</p>
                 <p>
                 <pre>
@@ -107,10 +121,10 @@
                 </pre>
                 </p> 
                 
-                <p>The encoding of variants involved multiple markup levels: <a href="#textual">textual</a>, <a href="#genetic">genetic</a> and <a href="intratextual">intratextual</a>. All these levels were encoded in the XML/TEI file through multiple TEI modules, in particular <code>textcrit</code> for variants across witnesses and <code>transcr</code> for the genetic level related to the manuscript, whereas for errors the <code>choice</code> element was selected.</p>
+                <p>The encoding of variants involved multiple markup levels: <a href="#textual">textual</a>, <a href="#genetic">genetic</a> and <a href="intratextual">intratextual</a>. These levels were recorded in the XML/TEI file through multiple TEI modules, in particular <code>textcrit</code> for variants across witnesses and <code>transcr</code> for the genetic level related to the manuscript, whereas the <code>choice</code> element was selected for errors.</p>
                 <h6 id="textual"><b>Textual level</b></h6>
-                <p>It records the reading selected by the editor (<code>&lt;lem&gt;</code>) and variants across witnesses, both substantial and <a href="#para-var">paragraphemic</a>, distinguished in the apparatus via the <code>@type</code> (with value either "substantial" or "paragraphemic"). <br/>The printed edition that is the starting point for the project, as already mentioned, selects the text of the princeps (P) as base-text and compares it with the final reading of manuscript Vat.lat. 3210 (V). Since two distinct redactional phases can be distinguished in the history of the text - the one from V to P and then from P itself to T through M – the textual units of the printed edition have been compared also with M and T, which were then manually collated with P to identify the variant readings across the printed editions.</p>
-                <p>The most recurring substantive variants include additions, deletions and transpositions. The table below shows some examples from the text with the related XML/TEI markup.</p>
+                <p>It records the reading selected by the editor (<code>&lt;lem&gt;</code>) and variants across witnesses, both substantive and <a href="#para-var">paragraphemic</a>, distinguished in the apparatus via <code>@type</code> (with value either "substantive" or "paragraphemic"). <br/>The printed edition that is the starting point for the project, as already mentioned, selects the text of the <i>princeps</i> (P) as base-text and compares it with the final reading of manuscript Vat.lat. 3210 (V). Since two distinct elaborative moments can be distinguished in the history of the text - the one from V to P and then from P itself to T through M – the textual units of the printed edition have been compared also with M and T, which were then manually collated with P to identify the variant readings across the printed editions.</p>
+                <p>The table below shows some examples of the most recurring substantive variants, with the related XML/TEI markup.</p>
                 <table class="table table-hover table-responsive">
                     <tr>
                         <th>Phenomenon</th>
@@ -161,7 +175,7 @@
                         <td>As shown in the snippet, T dislocates the &lt;seg&gt; already present in P, which is partially rewritten, after the addition introduced by M. The @corresp was used to specify a correspondence relationship between the two segments.</td>
                     </tr>
                 </table>
-                <p id="para-var">Given the importance of formal variants for a text like Bembo's <i>Prose</i>, the printed critical edition of the <i>editio princeps</i> recorded paragraphemic variants between the text of P and manuscript Vat.lat. 3210 as well. In this regard, the use of the double-endpoint attachment method has proven particularly effective, as it allows for a flat encoding of overlapping substantial and paragraphemic variants through the use of anchors in the base-text. To clarify this, an example from chapter III is presented below:
+                <p id="para-var">Given the importance of formal variants for a text like Bembo's <i>Prose</i>, the printed critical edition of the <i>editio princeps</i> recorded <b>paragraphemic variants</b> between the text of P and manuscript Vat.lat. 3210 as well. In this regard, the use of the double-endpoint attachment method has proven particularly effective, as it allows for a flat encoding of overlapping substantive and paragraphemic variants through the use of anchors in the base-text. To clarify this, an example from chapter III is presented below:
                 <p>
                     <table class="table table-hover table-responsive">
                         <tr>
@@ -182,14 +196,14 @@
                                 <b>Text</b>:<br/>
                                 &lt;anchor xml:id="chap3_com1_E3s"/&gt;a voi, che Italiano &lt;anchor xml:id="chap3_com1_E4s"/&gt;siete,&lt;anchor xml:id="chap3_com1_E3e"/&gt; a&lt;anchor xml:id="chap3_com1_E4e"/&gt;<br/>
                             </td>
-                            <td>In the snippet, the variant "a voi, che Italiano siete," is encoded first as substantial, as an insertion added by the author during the revision of the manuscript. The following paragraphemic variant starts within the segment interested by the substantial variant, it but ends afterwards.</td>
+                            <td>In the snippet, the variant "a voi, che Italiano siete," is encoded first as substantive, as an insertion added by the author during the revision of the manuscript. The following paragraphemic variant starts within the segment interested by the substantive variant, it but ends afterwards.</td>
                         </tr>
                     </table>
                 </p>
-                <p>In order these phenomena, the text of the printed critical edition was preserved in its paragraphemic asset. For this reason, the omographs analyzed by the editor (<a href="biblio.html">Vela 2001</a>, pp. LXXIV-LXXVIII) have been linked to a dedicated <code>&lt;fs&gt;</code> (feature structure) in the XML/TEI file, in order to disambiguate them and eventually make the linguistic annotation visible to the reader.</p>
+                <p>In order to record formal variants, the text of the printed critical edition was preserved in its paragraphemic asset. For this reason, the omographs analyzed by the editor (<a href="biblio.html">Vela 2001</a>, pp. LXXIV-LXXVIII) have been linked to a dedicated <code>&lt;fs&gt;</code> (feature structure) in the XML/TEI file, in order to disambiguate them and eventually make the linguistic annotation visible to the reader.</p>
                 <h6 id="genetic"><b>Genetic level</b></h6>
                 <p>On top of the variants between V and P, Vela’s edition also records the elaboration within V through the system of combined markers and apparatus entries introduced in the <a href="note.html">Philological note</a>.<br>
-                V is composed by different strata: a base draft with immediate variants and different layers of elaboration on top of the base draft.<br>
+                V is composed by different strata: a <b>base draft</b> with immediate variants and different <b>layers of elaboration</b> on top of the base draft.<br>
                 Furthermore, unlike the first two books, the third book presents different drafting campaigns – where differences of ink and <i>ductus</i> can be identified – and some correctorial accidents (<a href="biblio.html">Bembo 2001</a>, p. XXXI). In particular, limiting the analysis to ff. 91r-99v (III i 1 – III vii 18), the editor identified the following inks:
                 <ul>
                     <li>ff. 91-130: black ink = ink a</li>
@@ -198,7 +212,7 @@
                 </ul>
                 </p>
                 <p>Consequently, the model uses the <code>&lt;listChange&gt;</code> element to store the different layers identified within the manuscript (ink a = layer-0; ink b = layer-1; ink j = layer-2) and links them to the variants via the <code>@change</code> attribute within <code>&lt;mod&gt;</code> elements.<br>
-                The text of the base draft is enclosed between <code>&lt;rdg&gt;</code> tags and variants referred to the base draft are represented via transcriptional elements such as <code>&lt;add&gt;</code> and <code>&lt;del&gt;</code> or, when deletions and additions can be regarded as a single intervention on the text, via the <code>&lt;subst&gt;</code> element. Everything which is the result of elaboration on top of the base draft is enclosed between <code>&lt;mod&gt;</code> tags linked to the related layer (in case of insertions, the <code>&lt;rdg&gt;</code> element will be empty, and the <code>&lt;mod&gt;</code> will store the text of the addition and, eventually, inner interventions). 
+                The text of the base draft is enclosed between <code>&lt;rdg&gt;</code> tags and variants referred to the base draft are represented via transcriptional elements such as <code>&lt;add&gt;</code> and <code>&lt;del&gt;</code> or, when deletions and additions can be regarded as a single intervention on the text, via the <code>&lt;subst&gt;</code> element.<br/>Everything which is the result of elaboration on top of the base draft is enclosed between <code>&lt;mod&gt;</code> tags linked to the related layer (in case of insertions, the <code>&lt;rdg&gt;</code> element will be empty, and the <code>&lt;mod&gt;</code> will store the text of the addition and, eventually, inner interventions). As before, inner interventions within <code>&lt;mod&gt;</code> are rendered through transcriptional elements.
                 The table below shows some examples from the text:</p>
                 <table class="table table-hover table-responsive">
                     <tr>
@@ -226,7 +240,7 @@
                                     &lt;rdg wit="#T"&gt;a casa mio Fratello&lt;/rdg&gt;<br>
                             &lt;/app&gt;
                         </td>
-                        <td>The inline correction related to the base draft is represented with &lt;subst&gt;, whereas the subsequent intervention is enclosed betweem &lt;mod&gt; tags</td>
+                        <td>The inline correction related to the base draft is represented with &lt;subst&gt;, whereas the subsequent intervention is enclosed between &lt;mod&gt; tags</td>
                     </tr>
                     <tr>
                         <td>Text inserted using a different ink with inner corrections</td>
@@ -241,9 +255,9 @@
                     <tr>
                         <td>Transposition within V</td>
                         <td class="xml-code">
-                            &lt;app from="#chap4_com18_E2s" to="#chap4_com18_E2e" type="substantive"&gt;
-                                &lt;lem wit="#P #M #T" corresp="#transpo-1-base" xml:id="transpo-1-v"&gt;medesimamente&lt;/lem&gt;
-                                &lt;rdg wit="#V" change="#layer-0"&gt;&lt;seg xml:id="transpo-1-base" corresp="#transpo-1-v"&gt;, medesimamente&lt;/seg&gt;&lt;mod change="#layer-0"&gt;&lt;seg xml:id="transpo-1-target" corresp="#transpo-1-orig">medesimamente&lt;/seg&gt;&lt;/mod&gt;&lt;/rdg&gt;
+                            &lt;app from="#chap4_com18_E2s" to="#chap4_com18_E2e" type="substantive"&gt;<br/>
+                                &lt;lem wit="#P #M #T" corresp="#transpo-1-base" xml:id="transpo-1-v"&gt;medesimamente&lt;/lem&gt;<br/>
+                                &lt;rdg wit="#V" change="#layer-0"&gt;&lt;seg xml:id="transpo-1-base" corresp="#transpo-1-v"&gt;, medesimamente&lt;/seg&gt;&lt;mod change="#layer-0"&gt;&lt;seg xml:id="transpo-1-target" corresp="#transpo-1-orig">medesimamente&lt;/seg&gt;&lt;/mod&gt;&lt;/rdg&gt;<br/>
                             &lt;/app&gt;
                         </td>
                         <td>The snippet shows an example of transposition within the witness. This phenomenon has been encoded by assigning an <code>xml:id</code> to each segment involved in the transposition and cross-referencing them though a <code>@corresp</code> that points to the respective identifier</td>
@@ -251,9 +265,9 @@
                 </table>
                 <h6 id="intratextual"><b>Intratextual level</b></h6>
                 <p>This level concerns alternative variants, stop-press corrections and errors listed in the <i>Errata corrige</i> of the editions.<br/>
-                As mentioned in the <a href="note.html">Note</a>, stop-press corrections are an important feature of the posthomous edition of Bembo's <i>Prose</i>. Both stop-press and alternative variants (though no example of the latter was found in the chapters selected for the project) were encoded by enclosing the variant in a <code>span</code> or <code>seg</code> and associating it an <code>@ana</code> which refers to a <code>category</code> in a dedicated <code>taxonomy</code>. Additionally, for stop-press corrections the responsible for the correction and the printed sources for the analysis were identified via <code>@resp</code> and <code>@source</code> respectively and the text which preceeds the correction is recorded via a <code>note</code> element.
+                As mentioned in the <a href="note.html">Note</a>, stop-press corrections are an important feature of the posthomous edition of Bembo's <i>Prose</i>. For both stop-press and alternative variants (though no example of the latter was found in the chapters selected for the project) the proposed encoding encloses the variant in a <code>span</code> or <code>seg</code> and associates it an <code>@ana</code> which refers to a <code>category</code> in a dedicated <code>taxonomy</code>. Additionally, for stop-press corrections the responsible for the correction and the printed sources for the analysis were identified via <code>@resp</code> and <code>@source</code> respectively and the text which preceeds the correction is recorded via a <code>note</code> element.
 
-                <p>&lt;seg xml:id="spc-2" ana="#stop-press" source="#S-2001 #BCP-2018" resp="#BV"&gt;non si direbbon cosi spesso &lt;sic&gt;nelli&lt;/sic&gt; prose come nel verso.&lt;note target="#spc-2" type="T_variants" source="#T2"&gt;non si direbbono se non nel verso&lt;/note&gt;&lt;/seg&gt;</p>
+                <p class="intratextual-parag">&lt;seg xml:id="spc-2" ana="#stop-press" source="#S-2001 #BCP-2018" resp="#BV"&gt;non si direbbon cosi spesso &lt;sic&gt;nelli&lt;/sic&gt; prose come nel verso.&lt;note target="#spc-2" type="T_variants" source="#T2"&gt;non si direbbono se non nel verso&lt;/note&gt;&lt;/seg&gt;</p>
 
                 <p>The copy used as source for recording the text before Varchi's intervention has not been treated as a witness, but only described in a dedicated <code>&lt;msDesc&gt;</code> element. In the teiHeader, <code>&lt;relation&gt;</code> elements have been used to describe the relation between the copies of the editions of <i>Prose</i> and the editions themselves.</p>
 

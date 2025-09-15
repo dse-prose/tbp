@@ -202,6 +202,9 @@ footer .row {
     overflow-x: hidden;
     scroll-behavior: smooth;
 }
+.intratextual-parag {
+    font-size: smaller;
+}
 #sidebar {
     height: 100vh;
 }
