@@ -255,10 +255,13 @@
                     <tr>
                         <td>Transposition within V</td>
                         <td class="xml-code">
+                            Apparatus:
                             &lt;app from="#chap4_com18_E2s" to="#chap4_com18_E2e" type="substantive"&gt;<br/>
-                                &lt;lem wit="#P #M #T" corresp="#transpo-1-base" xml:id="transpo-1-v"&gt;medesimamente&lt;/lem&gt;<br/>
-                                &lt;rdg wit="#V" change="#layer-0"&gt;&lt;seg xml:id="transpo-1-base" corresp="#transpo-1-v"&gt;, medesimamente&lt;/seg&gt;&lt;mod change="#layer-0"&gt;&lt;seg xml:id="transpo-1-target" corresp="#transpo-1-orig">medesimamente&lt;/seg&gt;&lt;/mod&gt;&lt;/rdg&gt;<br/>
+                                &lt;lem wit="#P #M #T" corresp="#transpo-1-orig" xml:id="transpo-1-lem""&gt;medesimamente&lt;/lem&gt;<br/>
+                                &lt;rdg wit="#V" change="#layer-0" corresp="#transpo-1-lem"&gt;&lt;/seg&gt;&lt;mod change="#layer-0"&gt;&lt;seg xml:id="transpo-1-target" corresp="#transpo-1-orig">medesimamente&lt;/seg&gt;&lt;/mod&gt;&lt;/rdg&gt;<br/>
                             &lt;/app&gt;
+                            Text:
+                            &lt;anchor xml:id="transpo-1-orig"/&gt;
                         </td>
                         <td>The snippet shows an example of transposition within the witness. This phenomenon has been encoded by assigning an <code>xml:id</code> to each segment involved in the transposition and cross-referencing them though a <code>@corresp</code> that points to the respective identifier</td>
                     </tr>
@@ -272,6 +275,8 @@
                 <p>The copy used as source for recording the text before Varchi's intervention has not been treated as a witness, but only described in a dedicated <code>&lt;msDesc&gt;</code> element. In the teiHeader, <code>&lt;relation&gt;</code> elements have been used to describe the relation between the copies of the editions of <i>Prose</i> and the editions themselves.</p>
 
                 <p>Errors are enclosed between <code>&lt;choice&gt;</code> tags, within which <code>&lt;sic&gt;</code> tags have been used to record the original text and <code>&lt;corr&gt;</code> tags record the corrected text. In order to distinguish corrections listed in the <i>Errata corrige</i> from those made by the editor, <code>@resp</code> has been used to identify the person responsible for the intervention, either Pietro Bembo or the editor of the critical edition.</p>
+
+                <p><!--eventualmente qui strategie alternative alla tei--></p>
             </div>
             <div class="note-item" id="footer">
             <div class="row">
