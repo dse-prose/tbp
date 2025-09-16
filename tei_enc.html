@@ -70,9 +70,6 @@
                 </table>
                 <h3 id="representation">Representation</h3>
                 <p>This level involved the encoding of some of the visual features of the witnesses. Specifically, for each of the four witnesses, a <code>&lt;pb/&gt;</code> element has been used in order to mark the beginning of a new <b>page</b>, in combination with the attributes <code>@edRef</code>, to link the page to the related witness via the sigla defined in the <code>&lt;listWit&gt;</code> element, <code>@n</code> to specify the page number, designed as indicated below and, finally, a <code>@facs</code> to associate each page with the related image:<br>
-                    <p>&lt;pb edRef="#witness" n=“WitnessPagenumber" facs=”Witness_Pagenumber”/&gt;</p>
-                <p>In order to eventually provide a reconstruction of the text that also allows to align each <b>line</b> in the facsimiles with the corresponding line of the transcription, <code>&lt;lb/&gt</code> elements are used to mark the beginning of each line in the text or in the apparatus:
-                    <p>&lt;lb edRef="#P"/&gt;</p>
                 </p>
                 <h3 id="content">Content</h3>
                 <p>As mentioned, <i>Prose</i> is a grammatical treatise in the form of a dialogue. In order to record the speakers throughout the conversation, <b>dialogues</b> are enclosed between <code>said</code> tags, where the attributes <code>@who</code> and <code>@toWhom</code> specify the people involved in the dialogue by the reference to the <code>@xml:id</code> associated to each <code>&lt;person&gt;</code> in the <code>&lt;listPerson&gt;</code> element.</p>
@@ -155,13 +152,13 @@
                         <td>Swap of identical segments between witnesses</td>
                         <td class="xml-code">
                             &lt;app from="#chap7_com8_E2s" to="#chap7_com8_E2e" type="substantive"&gt;<br>
-                                    &lt;lem wit="#P"&gt;et la I nel numero del piu,  <span class="transpo-xml">&lt;l xml:id="rvf_97_1"&gt;Signor mirate come'l tempo vola&lt;/l&gt;</span> et anchora, <span class="transpo-xml">&lt;l xml:id="rvf_97_2"&gt;I di miei piu leggier, che nessun cervo.&lt;/l&gt;</span>&lt;/lem&gt;<br>
+                                    &lt;lem wit="#P"&gt;et la I nel numero del piu,  <span class="transpo-xml">&lt;seg xml:id="transpo-5-P" corresp="#transpo-5-M"&gt;</span>&lt;quote copyOf="quote_14P"/&gt;&lt;/seg&gt; et anchora, <span class="transpo-xml">seg xml:id="transpo-6-P" corresp="#transpo-6-M"&gt;</span>&lt;quote copyOf="quote_15P"/&gt;&lt;/seg&gt;&lt;/lem&gt;<br>
                                     &lt;rdg wit="#V" change="#layer-0"&gt;&lt;/rdg&gt;<br>
-                                    &lt;rdg wit="#M"&gt;et la .I. nel numero del piu, <span class="transpo-xml">&lt;l copyOf="#rvf_97_2"/&gt;</span> et anchora, <span class="transpo-xml">&lt;l copyOf="#rvf_97_1"/&gt;</span>&lt;/rdg&gt; <br>
+                                    &lt;rdg wit="#M"&gt;et la .I. nel numero del piu, <span class="transpo-xml">&lt;seg xml:id="transpo-6-M" corresp="#transpo-6-P"&gt;</span>&lt;quote copyOf="quote_15P"/&gt;&lt;/seg&gt; et anchora, <span class="transpo-xml">seg xml:id="transpo-5-M" corresp="#transpo-5-P"&gt;</span>&lt;quote copyOf="quote_14P"/&gt;&lt;/seg&gt;&lt;/lem&gt;<br> <br>
                                     &lt;rdg wit="#T"&gt;&lt;/rdg&gt;<br>
                             &lt;/app&gt;
                         </td>
-                        <td>In the snippet, we can see that the lemma quotes two lines from <i>Rerum vulgarium fragmenta</i>, which are then quoted in M in reversed order. Since the lines are identical and only their position in the text is affected, it was possible to encode this kind of variant by associating an xml:id to the two lines and creating a virtual copy of them according to the order followed in M</td>
+                        <td>In the snippet, we can see that the lemma quotes two lines from <i>Rerum vulgarium fragmenta</i>, which are then quoted in M in reversed order. The <code>copyOf</code> attribute creates a virtual copy of verses according to the order followed in M, while the <code>&lt;seg&gt;</code> element specifies an explicit correspondance between the transposed passages.</td>
                     </tr>
                     <tr>
                         <td>Transposition of non identical segments between witnesses</td>
