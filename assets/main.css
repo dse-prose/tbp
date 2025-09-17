@@ -250,6 +250,9 @@ footer .row {
 #doc-body h2 {
     padding-top: 2.5em
 }
+#doc-body p {
+    padding: 1.5em;
+}
 .xml-code {
     font-family: 'Courier New', Courier, monospace;
     font-size: smaller;

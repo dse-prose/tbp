@@ -50,12 +50,10 @@
             <div class="doc-item container col-12 px-5" id="doc-body">
                 <h1>DSE mockup</h1>
                 <p><!--introduzione sulle edizioni consultate e sulle possibili tecnologie (perchè non eviti, come arrivare al prodotto finale)--></p>
-                <p>Considering the specific features of the case study and the encoding choices made, the following paragraphs present a proposal for a digital scholarly edition designed to effectively represent the multiple layers of information captured through TEI markup.<br/>The interface is intended to reflect the authorial process, distinguishing the phase leading from the manuscript to the <i>editio princeps</i> from that which continues from the <i>princeps</i> to the final edition. The edition primarily aims to facilitate comparison between the text of P and that of the other witnesses, while also documenting the elaborative process related to the manuscript and the variants at the level of each individual witness. These functionalities, summarized under the label <b>parallel view</b>, are complemented by a <b>single view</b> mode, which, for each witness, allows to switch multiple visualizations (image-to-text and text-to-text) and text presentations.<br/> In addition, the edition includes general functionalities related to other content elements included in the encoding model, such as citations, linguistic annotations, and other metadata.</p>
-                <!--Moreover, the printed edition presents an original system of representation of the variants, which can be intuitively translated in an interactive interface, able to represent the different typology of variants through chromatic and typographic elements. -->
-
+                <p>Considering the specific features of the case study and the encoding choices made, the following paragraphs present a proposal for a digital scholarly edition designed to effectively represent the multiple layers of information captured through TEI markup.<br/>The interface is intended to reflect the authorial process, distinguishing the phase leading from the manuscript to the <i>editio princeps</i> from that which continues from the <i>princeps</i> to the final edition. The edition primarily aims to facilitate comparison between the text of P and that of the other witnesses, while also documenting the elaborative process related to the manuscript and the variants at the level of each individual witness. These functionalities, summarized under the label <b>parallel view</b>, are complemented by a <b>single view</b> mode, which, for each witness, allows to read the text next to the facsimiles of the respective witness.<br/> In addition, the proposal includes general functionalities related to other content elements included in the encoding model, such as quotations, linguistic annotations, and other metadata.</p>
                 
                 <h2 id="parallel-view">Parallel view</h2>
-                <p>As explained in the <a href="note.html">Note</a>, two moments can be identified in the history of Bembo’s <i>Prose</i> and the <i>princeps</i> can be considered as a link between them. The composition process has been reflected in the interface: since the corrections documented by V bring towards the text of P, which is the reference for M and then for T, the interface separates the two elaborative moments, allowing the comparison of the text of the manuscript and of the following printed editions with the <i>princeps</i>.</p>
+                <p>As explained in the <a href="note.html" target="_blank">Note</a>, two moments can be identified in the history of Bembo’s <i>Prose</i> and the <i>princeps</i> can be considered as a link between them. The compositional process has been reflected in the interface, which enables the comparison between the text of the <b><i>princeps</i></b> and, alternatively, the one of the <b>manuscript</b> witness and of subsequent <b>printed editions</b>.</p>
                 <div id="fig-container-1">
                 <figure class="prototype-figure" id="red-1">
                     <img src="images/red_1.png"/>
@@ -71,7 +69,7 @@
                     <img src="images/par_var.png"/>
                     <figcaption>Parallel view. Paragraphemic variants highlighted</figcaption>
                 </figure>
-                <p>The printed critical edition chosen as starting point for the development of the project records the elaboration within the manuscript as well as the variant readings between the text documented by Vat.lat 3210 and the text documented by the <i>princeps</i>. In order to represent the diachrony of interventions within the manuscript, the mockup proposes three different reconstructions: <b>base draft</b>, with related correctorial accidents and immediate variants, <b>final text</b>, which presents the text resulting from the application of authorial corrections, finally, <b>revision</b>, which shows the corrections documented by the manuscript and referred to different layers of stratification. <!-- A tooltip on hover describes the typology of variant and optionally its collocation on the page. --></p>
+                <p>The printed critical edition chosen as starting point for the development of the project (see <a href="biblio.html#V-2001" target="_blank">Bembo 2001</a>) records the elaboration within the manuscript as well as the variant readings between the text documented by Vat.lat 3210 and the text documented by the <i>princeps</i>. In order to represent the diachrony of interventions within the manuscript, the mockup proposes three different reconstructions: <b>base draft</b>, with related immediate variants, <b>final text</b>, which presents the text resulting from the application of authorial corrections, finally, <b>revision</b>, which shows the corrections documented by the manuscript and referred to different layers of stratification. <!-- A tooltip on hover describes the typology of variant and optionally its collocation on the page. --></p>
                 <div id="fig-container-2" class="d-flex justify-content-center">
                 <figure class="prototype-figure" id="phases-base-img">
                     <img src="images/phases_base.png"/>
@@ -86,18 +84,19 @@
                     <figcaption>Parallel view. Revision.</figcaption>
                 </figure>
                 </div>
-                <p>The various typologies of variants referred to the manuscript are graphically represented as follows:</p>
+                <p>The various typologies of <b>variants within the manuscript</b> are graphically represented as follows:</p>
                 <ul>
                     <!-- <li><b>Omitted text</b> is enclosed between minus (-) symbols</li>
                     <li><b>Inserted text</b> is enclosed between plus (+) symbols</li> -->
                     <li>Deletions are represented with a <span class="strikethrough">strikethrough</span></li>
                     <li>Additions are represented as <span class="addition">superscript</span> text</li>
                     <li><b></b>Deletions and additions which can be explained as part of the same intervention are represented as <span class="strikethrough">deletion</span><span class="addition">addition</span></li>
-                    <li>When it was possible to distinguish more phases within an elaborated passage, the reconstructed texts are represented one after the other, preceded by a superscript number which specifies the correct sequence</li>
-                    <li><span class="elaboration-font-style">Elaborated passages</span> can be identified by a blue color font. When corrections have been written using a <b>different ink</b> or present a different <b>ductus</b>, this is specified in a tooltip.</li>
-                    <li>In the case of <b>transpositions</b> within V, the variants occur between the base draft and the text in its following elaboration and, also, between the base draft of the manuscript and the text of P. The latter case is thoroughly explained in the <a href="#transpo-across">following paragraph</a>, devoted to the representation of variants across witnesses, while <span class="transpo-font-style">transpositions</span> within the witness are addressed as follows: the base draft shows the text in its original location, while the revision shows it in its new location, which is treated as a link connected to the original location of the text, now replaced by a placeholder.</li>
+                    <li>When it was possible to distinguish more phases within an elaborated passage, the reconstructed texts are represented one after the other, preceded by a number which specifies the correct sequence</li>
+                    <li><span class="elaboration-font-style">Elaborated passages</span> can be identified by a blue color font. Differences in <b>ink</b> and <b>ductus</b> have been recording in the encoding as explained in the <a href="tei_enc.html#ink-encoding">dedicated section</a>, and could eventually be displayed as popup information.</li>
+                    <li>Based on the selected chapters, in case of <b>transpositions</b> within V, the variants occur between the <b>base draft</b> and the text in its <b>subsequent elaboration</b> and, also, between the <b>base draft</b> of the manuscript and the <b>text of P</b>. The latter case is thoroughly explained in the <a href="#transpo-across">following paragraph</a>, devoted to the representation of variants across witnesses, while <span class="transpo-font-style">transpositions</span> within the witness are addressed as follows: the base draft shows the text in its original location, while the revision shows it in its new location, which is treated as a link connected to the original location of the text, now replaced by a placeholder.</li>
                 </ul>
-                <p>Finally, <span class="error-font-style">errors</span> listed in the <i>Errata corrige</i> of each edition can be identified by a bright red font color. The following images show a visual example for each of the cases discussed above and a legend that summarizes the chromatic and typographic markers proposed.</p>
+                <p>Finally, <span class="error-font-style">errors</span> listed in the <i>Errata corrige</i> of each edition can be identified by a bright red font color.</p>
+                <p>The following images show a visual example for each of the cases discussed above and a legend that summarizes the chromatic and typographic markers proposed.</p>
                 <div id="fig-container-2" class="d-flex">
                 <figure class="prototype-figure" id="base-draft-img">
                     <img src="images/base_draft.png"/>
@@ -124,8 +123,8 @@
                     <figcaption>Legend</figcaption>
                 </figure>
                 </div>
-                <p>The reason for this macro-division between base draft, revision and final text is both due to the prosaic nature of the text and the correction typologies documented by the history of <i>Prose</i>, which, especially from the <i>princeps</i> onward, are additions and expansions <!--check AU PHIL-->. An edition which analytically reconstructs the correctional phases identifiable in the elaboration of the text, <!-- like in Leopardi's <a href="" target="_blank">Idilli</a> digital edition, --> could be hard to read for a case study such as the one at hand, whereas chronological encoding and phase visualization, if limited to the moments of base draft, final version and revision, including the representation of the eventual internal stratification in the latter, seem more immediate and readable, without excluding the representation of the diachrony of the text, and also appear to be sound with the ecdotic principles of the printed edition.</p>
-                <p>As for variants across witnesses, the following cases have been addressed:</p> 
+                <p>The reason for this macro-division between base draft, revision and final text is both due to the prosaic nature of the text and the correction typologies documented by the history of <i>Prose</i>, which, especially from the <i>princeps</i> onward, are mostly additions and transpositions. An edition which analytically reconstructs the correctional phases identifiable in the elaboration of the text could be hard to interpret for a case study such as the one at hand, whereas <b>chronological encoding</b>and <b>phase visualization</b>, if limited to the moments of base draft, final version and revision, including the representation of the eventual internal stratification in the latter, seem more immediate and readable, without excluding the representation of the diachrony of the text, and also appear to be sound with the ecdotic principles of the printed edition.</p>
+                <p>As for <b>variants across witnesses</b>, the following cases have been addressed:</p> 
                 <ul>
                     <li><span class="omission-bg-style">Omissions</span> are identified by a red background color</li>
                     <li><span class="addition-bg-style">Additions</span> are identified by a green background color</li>
@@ -141,42 +140,27 @@
                     <figcaption>Parallel view. Transposition between P and M (lines swapped) and P and T</figcaption>
                 </figure>
                 </div>
-                <p>Finally, the model takes into account <span class="spc-font-style">stop-press corrections</span> in the third edition. These are written in bold and underlined. By clicking on the portion of text involved in the correction, a modal would allow to read the text prior to the corrections and to indicate the copy from which the text is derived.</p>
+                <p>Finally, the model takes into account <span class="spc-font-style">stop-press corrections</span> in the third edition. These are written in bold and underlined. By clicking on the portion of text involved in the correction, a modal would allow to read the text prior to the corrections and, possibly, the copy from which the text is derived.</p>
                 <figure class="prototype-figure" id="stop-press-img">
                     <img src="images/stop_press.png"/>
                     <figcaption>Parallel view. An example of stop-press correction</figcaption>
                 </figure>
                 <!--prototype banner-->
-                <div id="prototype-banner">A basic working prototype has been realized to show the main features of the Parallel view. For the implementation of the prototype, the output texts for the witnesses and textual reconstructions of the manuscript have been manually coded in HTML. Chapter IV was selected as the most representative of the features described above.<br/><a href="prototype/pilot.html" target="_blank">Go to the prototype</a></div>
+                <div id="prototype-banner">A basic working prototype in JavaScript has been realized to show the main features of the Parallel view. For the implementation of the prototype, the output texts for the witnesses and textual reconstructions of the manuscript have been manually coded in HTML. Chapter IV was selected as the most representative of the features described above.<br/><a href="prototype/pilot.html" target="_blank">Go to the prototype</a></div>
                 <h2 id="single-view">Single view</h2>
                 <p>The single view, which can be toggled for each witness, would provide the user the possibility to read the text next to the <b>facsimiles</b> of the respective edition. In the single view, the <b>critical edition</b> would display one page at a time, in order to facilitate the comparison between the transcription and the primary source. <!-- The single view doesn't allow for a synoptic display of the witnesses, but, in the critical edition mode, by clicking on variants a popup would show the readings in the other witnesses. --> Errors listed in the <i>Errata corrige</i> would still be identifiable by a red font color, with a tooltip displaying the original text.</p>
-                <div id="fig-container-5">
-                <!-- <figure class="prototype-figure" id="facs-text-img">
-                    <img src="images/semi_diplo.png"/>
-                    <figcaption>Single view - Image to text mode - Semi-diplomatic edition for P (Tacuino 1525)</figcaption>
-                </figure> -->
                 <figure class="prototype-figure" id="facs-text-img">
                     <img src="images/critical.png"/>
                     <figcaption>Single view - Image to text mode - Critical edition for P (Tacuino 1525)</figcaption>
                 </figure>
-                </div>
-                <div id="fig-container-5">
-                <!-- <figure class="prototype-figure" id="facs-text-img">
-                    <img src="images/semi_diplo_errata.png"/>
-                    <figcaption>Single view - Image to text mode - Semi-diplomatic edition. <i>Errata corrige</i> popup example</figcaption>
-                </figure> -->
-                <!-- <figure class="prototype-figure" id="facs-text-img">
-                    <img src="images/text_to_text.png"/>
-                    <figcaption>Single view - Text to text mode for P (Tacuino 1525)</figcaption>
-                </figure> -->
-                </div>
-                <p>As for the manuscript witness, the single view would allow a comparison between each textual reconstruction with the facsimiles. In addition, a Text-to-text mode would provide the user the possibility to compare two reconstruction at a time. <!--(the critical edition shows the final text, with popup variants. NOn ha molto senso avere un'edizione critica per il manoscritto, in più in questa critical edition degli altri testimoni il confronto sarebbe con l'ultima versione di V o con tutte generando testimoni fittizi? E allora si potrebbe evitare la critical edition di V e mostrare i popup con varianti in ognuno dei tre strati?)--><!-- , the three textual recostructions presented above: base draft, revision and final text. --> <!-- The latter, unlike the revised text presented in the parallel view, offers a reconstruction of the text as resulting from the application of the authorial corrections, without attempting to reconstruct their sequence. --> <!-- The text-to-text mode, therefore, would allow not only to compare the semi-diplomatic and critical editions, but the different textual reconstructions produced for the manuscript. --></p>
+                
+                <p>As for the manuscript witness, the single view would allow a comparison between each textual reconstruction and the facsimiles. In addition, a Text-to-text mode would provide the user the possibility to compare <b>two reconstructions</b> at a time.</p>
                 <figure class="prototype-figure" id="facs-text-img">
                     <img src="images/text_to_text_v.png"/>
                     <figcaption>Single view - Text to text mode - Comparison between V base draft and final text</figcaption>
                 </figure>
                 <h2 id="other-features">Other features</h2>
-                <p>For each witness included in the edition, a description has been provided in the XML/TEI file. The information associated with each witness would be displayed in the appropriate overlay:</p>
+                <p>For each witness included in the edition, a description has been provided in the XML/TEI file. The information associated with each witness would be displayed in an appropriate overlay:</p>
                 <figure class="prototype-figure" id="facs-text-img">
                     <img src="images/wit_info.png"/>
                     <figcaption>About the witness</figcaption>

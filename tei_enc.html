@@ -202,14 +202,14 @@
                 <h6 id="genetic"><b>Genetic level</b></h6>
                 <p>On top of the variants between V and P, Vela’s edition also records the elaboration within V through the system of combined markers and apparatus entries introduced in the <a href="note.html">Philological note</a>.<br>
                 V is composed by different strata: a <b>base draft</b> with immediate variants and different <b>layers of elaboration</b> on top of the base draft.<br>
-                Furthermore, unlike the first two books, the third book presents different drafting campaigns – where differences of ink and <i>ductus</i> can be identified – and some correctorial accidents (<a href="biblio.html">Bembo 2001</a>, p. XXXI). In particular, limiting the analysis to ff. 91r-99v (III i 1 – III vii 18), the editor identified the following inks:
+                Furthermore, unlike the first two books, the third book presents different drafting campaigns – where differences of ink and <i>ductus</i> can be identified – and some correctorial accidents (<a href="biblio.html#V-2001">Bembo 2001</a>, p. XXXI). In particular, limiting the analysis to ff. 91r-99v (III i 1 – III vii 18), the editor identified the following inks:
                 <ul>
                     <li>ff. 91-130: black ink = ink a</li>
                     <li>slip added between f. 93v and f. 94r (iii 3): different <i>ductus</i> and ink (referred to as "ink j" for the sake of the encoding)</li>
                     <li>f. 96v, r. II (iv 17 and 18): interlinear and aside-written additions in ink b [washed brown ink used for ff. 131-135]</li>
                 </ul>
                 </p>
-                <p>Consequently, the model uses the <code>&lt;listChange&gt;</code> element to store the different layers identified within the manuscript (ink a = layer-0; ink b = layer-1; ink j = layer-2) and links them to the variants via the <code>@change</code> attribute within <code>&lt;mod&gt;</code> elements.<br>
+                <p id="ink-encoding">Consequently, the model uses the <code>&lt;listChange&gt;</code> element to store the different layers identified within the manuscript (ink a = layer-0; ink b = layer-1; ink j = layer-2) and links them to the variants via the <code>@change</code> attribute within <code>&lt;mod&gt;</code> elements.<br>
                 The text of the base draft is enclosed between <code>&lt;rdg&gt;</code> tags and variants referred to the base draft are represented via transcriptional elements such as <code>&lt;add&gt;</code> and <code>&lt;del&gt;</code> or, when deletions and additions can be regarded as a single intervention on the text, via the <code>&lt;subst&gt;</code> element.<br/>Everything which is the result of elaboration on top of the base draft is enclosed between <code>&lt;mod&gt;</code> tags linked to the related layer (in case of insertions, the <code>&lt;rdg&gt;</code> element will be empty, and the <code>&lt;mod&gt;</code> will store the text of the addition and, eventually, inner interventions). As before, inner interventions within <code>&lt;mod&gt;</code> are rendered through transcriptional elements.
                 The table below shows some examples from the text:</p>
                 <table class="table table-hover table-responsive">
