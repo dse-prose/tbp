@@ -129,6 +129,8 @@ nav a:hover {
 }
 .witness-overlay {
     display: none;
+    padding: 3em;
+    padding-top: 1em;
 }
 .witness-overlay.visible {
     display: block;
@@ -143,13 +145,19 @@ nav a:hover {
 }
 .witness-overlay h1 {
     text-align: center;
-    padding: 0.2em;
-    font-size: 2.5em;
+    font-size: 2em;
+    font-weight: bold;
 }
 .witness-overlay h2 {
     text-align: left;
-    padding: 1em;
-    font-size: 1.5em;
+    padding: 0.1em;
+    font-size: 1em;
+    font-weight: bold;
+}
+.witness-overlay p, .witness-overlay li {
+    padding: 0;
+    padding-left: 0.5em;
+    font-size: small;
 }
 #ms-var-ctrl option {
     transition: background-color 0.3s ease-in;
