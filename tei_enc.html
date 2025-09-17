@@ -150,7 +150,7 @@
                         <td>The text of P is already present in the base draft of V, but it is later omitted in the second and third edition</td>
                     </tr>
                     <tr> 
-                        <td>Swap of identical segments between witnesses</td>
+                        <td>Transposition between witnesses</td>
                         <td class="xml-code">
                             &lt;app from="#chap7_com8_E2s" to="#chap7_com8_E2e" type="substantive"&gt;<br>
                                     &lt;lem wit="#P"&gt;et la I nel numero del piu,  <span class="transpo-xml">&lt;seg xml:id="transpo-5-P" corresp="#transpo-5-M"&gt;</span>&lt;quote copyOf="quote_14P"/&gt;&lt;/seg&gt; et anchora, <span class="transpo-xml">seg xml:id="transpo-6-P" corresp="#transpo-6-M"&gt;</span>&lt;quote copyOf="quote_15P"/&gt;&lt;/seg&gt;&lt;/lem&gt;<br>
@@ -161,7 +161,7 @@
                         </td>
                         <td>In the snippet, we can see that the lemma quotes two lines from <i>Rerum vulgarium fragmenta</i>, which are then quoted in M in reversed order. The <code>copyOf</code> attribute creates a virtual copy of verses according to the order followed in M, while the <code>&lt;seg&gt;</code> element specifies an explicit correspondance between the transposed passages.</td>
                     </tr>
-                    <tr>
+                    <!-- <tr>
                         <td>Transposition of non identical segments between witnesses</td>
                         <td class="xml-code">
                             &lt;app from="#chap7_com14_E1s" to="#chap7_com14_E1e" type="substantive"&gt;<br>
@@ -172,7 +172,7 @@
                         </td>
                         <td>As shown in the snippet, T dislocates the &lt;seg&gt; already present in P, which is partially rewritten, after the addition introduced by M. The @corresp was used to specify a correspondence relationship between the two segments.</td>
                     </tr>
-                </table>
+                </table> -->
                 <p id="para-var">Given the importance of formal variants for a text like Bembo's <i>Prose</i>, the printed critical edition of the <i>editio princeps</i> recorded <b>paragraphemic variants</b> between the text of P and manuscript Vat.lat. 3210 as well. In this regard, the use of the double-endpoint attachment method has proven particularly effective, as it allows for a flat encoding of overlapping substantive and paragraphemic variants through the use of anchors in the base-text. To clarify this, an example from chapter III is presented below:
                 <p>
                     <table class="table table-hover table-responsive">
@@ -253,12 +253,12 @@
                     <tr>
                         <td>Transposition within V</td>
                         <td class="xml-code">
-                            Apparatus:
+                            <b>Apparatus</b>:<br/>
                             &lt;app from="#chap4_com18_E2s" to="#chap4_com18_E2e" type="substantive"&gt;<br/>
                                 &lt;lem wit="#P #M #T" corresp="#transpo-1-orig" xml:id="transpo-1-lem""&gt;medesimamente&lt;/lem&gt;<br/>
                                 &lt;rdg wit="#V" change="#layer-0" corresp="#transpo-1-lem"&gt;&lt;/seg&gt;&lt;mod change="#layer-0"&gt;&lt;seg xml:id="transpo-1-target" corresp="#transpo-1-orig">medesimamente&lt;/seg&gt;&lt;/mod&gt;&lt;/rdg&gt;<br/>
-                            &lt;/app&gt;
-                            Text:
+                            &lt;/app&gt;<br/>
+                            <b>Text</b>:<br/>
                             &lt;anchor xml:id="transpo-1-orig"/&gt;
                         </td>
                         <td>The snippet shows an example of transposition within the witness. This phenomenon has been encoded by assigning an <code>xml:id</code> to each segment involved in the transposition and cross-referencing them though a <code>@corresp</code> that points to the respective identifier</td>
