@@ -48,7 +48,7 @@ var quotedWorks = {
         "title": "Gentil Madonna",
         "scope": "45"
     },
-    "bibl_04a": {
+    "bibl_05a": {
         "author": "Enzo di Sardegna",
         "title": "S'eo trovasse Pietanza",
         "scope": "45"
@@ -72,7 +72,7 @@ var quotedWorks = {
         "unit_1": "Inferno",
         "unit_2": "30",
         "scope": "113-114"
-    }
+    },
 }
 
 var witnessInfo = $(".wit-info")
