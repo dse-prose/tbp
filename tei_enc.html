@@ -171,8 +171,8 @@
                             &lt;/app&gt;<br>
                         </td>
                         <td>As shown in the snippet, T dislocates the &lt;seg&gt; already present in P, which is partially rewritten, after the addition introduced by M. The @corresp was used to specify a correspondence relationship between the two segments.</td>
-                    </tr>
-                </table> -->
+                    </tr>-->
+                </table> 
                 <p id="para-var">Given the importance of formal variants for a text like Bembo's <i>Prose</i>, the printed critical edition of the <i>editio princeps</i> recorded <b>paragraphemic variants</b> between the text of P and manuscript Vat.lat. 3210 as well. In this regard, the use of the double-endpoint attachment method has proven particularly effective, as it allows for a flat encoding of overlapping substantive and paragraphemic variants through the use of anchors in the base-text. To clarify this, an example from chapter III is presented below:
                 <p>
                     <table class="table table-hover table-responsive">
@@ -198,11 +198,11 @@
                         </tr>
                     </table>
                 </p>
-                <p>In order to record formal variants, the text of the printed critical edition was preserved in its paragraphemic asset. For this reason, the omographs analyzed by the editor (<a href="biblio.html">Vela 2001</a>, pp. LXXIV-LXXVIII) have been linked to a dedicated <code>&lt;fs&gt;</code> (feature structure) in the XML/TEI file, in order to disambiguate them and eventually make the linguistic annotation visible to the reader.</p>
+                <p>In order to record formal variants, the text of the printed critical edition was preserved in its paragraphemic asset. For this reason, the omographs analyzed by the editor (<a href="biblio.html#V-2001" target="_blank">Bembo 2001</a>, pp. LXXIV-LXXVIII) have been linked to a dedicated <code>&lt;fs&gt;</code> (feature structure) in the XML/TEI file, in order to disambiguate them and eventually make the linguistic annotation visible to the reader.</p>
                 <h6 id="genetic"><b>Genetic level</b></h6>
-                <p>On top of the variants between V and P, Vela’s edition also records the elaboration within V through the system of combined markers and apparatus entries introduced in the <a href="note.html">Philological note</a>.<br>
+                <p>On top of the variants between V and P, Vela’s edition also records the elaboration within V through the system of combined markers and apparatus entries introduced in the <a href="note.html" target="_blank">Philological note</a>.<br>
                 V is composed by different strata: a <b>base draft</b> with immediate variants and different <b>layers of elaboration</b> on top of the base draft.<br>
-                Furthermore, unlike the first two books, the third book presents different drafting campaigns – where differences of ink and <i>ductus</i> can be identified – and some correctorial accidents (<a href="biblio.html#V-2001">Bembo 2001</a>, p. XXXI). In particular, limiting the analysis to ff. 91r-99v (III i 1 – III vii 18), the editor identified the following inks:
+                Furthermore, unlike the first two books, the third book presents different drafting campaigns – where differences of ink and <i>ductus</i> can be identified – and some correctorial accidents (<a href="biblio.html#V-2001" target="_blank">Bembo 2001</a>, p. XXXI). In particular, limiting the analysis to ff. 91r-99v (III i 1 – III vii 18), the editor identified the following inks:
                 <ul>
                     <li>ff. 91-130: black ink = ink a</li>
                     <li>slip added between f. 93v and f. 94r (iii 3): different <i>ductus</i> and ink (referred to as "ink j" for the sake of the encoding)</li>
@@ -227,7 +227,7 @@
                                     &lt;/rdg&gt;<br>
                             &lt;/app&gt;
                         </td>
-                        <td>The text of the base draft is enclosed in an &lt;rdg&gt; element, which contains a &lt;mod&gt; with the revised text. <code>@type</code> with value "reuse" has been used to indicate that the correction is derived from a previous reading (cfr. <a href="biblio.html">Italia-Raboni 2021</a>, p. 61).</td>
+                        <td>The text of the base draft is enclosed in an &lt;rdg&gt; element, which contains a &lt;mod&gt; with the revised text. <code>@type</code> with value "reuse" has been used to indicate that the correction is derived from a previous reading (cfr. <a href="biblio.html" target="_blank">Italia-Raboni 2021</a>, p. 61).</td>
                     </tr>
                     <tr>
                         <td>Corrections in the base draft and elaboration that leads to the same text of P</td>
@@ -266,7 +266,7 @@
                 </table>
                 <h6 id="intratextual"><b>Intratextual level</b></h6>
                 <p>This level concerns alternative variants, stop-press corrections and errors listed in the <i>Errata corrige</i> of the editions.<br/>
-                As mentioned in the <a href="note.html">Note</a>, stop-press corrections are an important feature of the posthomous edition of Bembo's <i>Prose</i>. For both stop-press and alternative variants (though no example of the latter was found in the chapters selected for the project) the proposed encoding encloses the variant in a <code>span</code> or <code>seg</code> and associates it an <code>@ana</code> which refers to a <code>category</code> in a dedicated <code>taxonomy</code>. Additionally, for stop-press corrections the responsible for the correction and the printed sources for the analysis were identified via <code>@resp</code> and <code>@source</code> respectively and the text which preceeds the correction is recorded via a <code>note</code> element.
+                As mentioned in the <a href="note.html" target="_blank">Note</a>, stop-press corrections are an important feature of the posthomous edition of Bembo's <i>Prose</i>. For both stop-press and alternative variants (though no example of the latter was found in the chapters selected for the project) the proposed encoding encloses the variant in a <code>span</code> or <code>seg</code> and associates it an <code>@ana</code> which refers to a <code>category</code> in a dedicated <code>taxonomy</code>. Additionally, for stop-press corrections the responsible for the correction and the printed sources for the analysis were identified via <code>@resp</code> and <code>@source</code> respectively and the text which preceeds the correction is recorded via a <code>note</code> element.
 
                 <p class="intratextual-parag">&lt;seg xml:id="spc-2" ana="#stop-press" source="#S-2001 #BCP-2018" resp="#BV"&gt;non si direbbon cosi spesso &lt;sic&gt;nelli&lt;/sic&gt; prose come nel verso.&lt;note target="#spc-2" type="T_variants" source="#T2"&gt;non si direbbono se non nel verso&lt;/note&gt;&lt;/seg&gt;</p>
 
@@ -283,7 +283,7 @@
                 </div>
                 <div class="col-6 d-flex justify-content-center">
                     <ul>
-                        <li><i class="fa-solid fa-user"></i><a href="credits.html">Credits</a></li>
+                        <li><i class="fa-solid fa-user"></i><a href="credits.html" target="_blank">Credits</a></li>
                         <li><i class="fa-solid fa-folder"></i><a href="https://github.com/dse-prose/tbp" target="_blank">Github repository</a></li>
                     </ul>
                 </div>
