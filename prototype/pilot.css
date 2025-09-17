@@ -421,3 +421,12 @@ q.block {
 #instructions .modal-body {
     padding: 2em;
 }
+.gray {
+    color: gray !important;
+}
+img {
+    height: 1em;
+}
+#encoding-label {
+    height: 2em;
+}
