@@ -69,7 +69,8 @@
                     </tr>
                 </table>
                 <h3 id="representation">Representation</h3>
-                <p>This level involved the encoding of some of the visual features of the witnesses. Specifically, for each of the four witnesses, a <code>&lt;pb/&gt;</code> element has been used in order to mark the beginning of a new <b>page</b>, in combination with the attributes <code>@edRef</code>, to link the page to the related witness via the sigla defined in the <code>&lt;listWit&gt;</code> element, <code>@n</code> to specify the page number, designed as indicated below and, finally, a <code>@facs</code> to associate each page with the related image:<br>
+                <p>This level involved the encoding of some of the visual features of the witnesses. Specifically, for each of the four witnesses, a <code>&lt;pb/&gt;</code> element has been used in order to mark the beginning of a new <b>page</b>, in combination with the attributes <code>@edRef</code>, to link the page to the related witness via the sigla defined in the <code>&lt;listWit&gt;</code> element and <code>@n</code> to specify the page number, designed as indicated below:<br>
+                    <p>&lt;pb edRef="#P" n="P41r"/&gt;</p>
                 </p>
                 <h3 id="content">Content</h3>
                 <p>As mentioned, <i>Prose</i> is a grammatical treatise in the form of a dialogue. In order to record the speakers throughout the conversation, <b>dialogues</b> are enclosed between <code>said</code> tags, where the attributes <code>@who</code> and <code>@toWhom</code> specify the people involved in the dialogue by the reference to the <code>@xml:id</code> associated to each <code>&lt;person&gt;</code> in the <code>&lt;listPerson&gt;</code> element.</p>

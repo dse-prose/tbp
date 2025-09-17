@@ -154,6 +154,15 @@ nav a:hover {
 #note-banner:hover, #biblio-banner:hover {
     background-color: rgba(0, 0, 0, 0.3);
 }
+#prototype-banner {
+    background-color: var(--body-secondary-light);
+    border-radius: 5px;
+    padding: 1.5em;
+    height: fit-content;
+    width: fit-content;
+    margin-top: 3em;
+    text-align: center;
+}
 #footer {
     height: max-content;
     background-color: var(--body-secondary-light);

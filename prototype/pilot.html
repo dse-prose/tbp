@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>The Third Book of Pietro Bembo's Prose: pilot digital edition</title>
+     <!-- Bootstrap CSS -->
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <!--Google fonts-->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;1,300&family=Inter:wght@300;800&display=swap">
+     <!-- project css -->
+     <link rel="stylesheet" href="pilot.css">
+     <!--js file-->
+     <script src="pilot.js" defer></script>
+     <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/13fe341790.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="main"> 
+            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+                <div class="container-fluid">
+                  <a class="navbar-brand" href="index.html">TBP - prototype</a>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                  </button>
+                </div>
+              </nav>
+              <!--secondary nav-->
+              <a class="disabled" id="toggle-lists" href="#offcanvas-lists" title="Lists not available">Lists</a>
+              <nav class="navbar navbar-expand-lg bg-body-tertiary" id="control-nav">
+                <div class="row container-fluid">
+                  <div class="col-2"></div>
+                  <div class="col-8 d-flex justify-content-center">
+                    <button class="btn-sm px-3 mx-5" id="toP">From V to P</button>
+                    <button class="btn-sm px-3 mx-5" id="fromP">From P to T</button>
+                  </div>
+                  <div class="col-2 d-flex justify-content-center"><a type="button" data-bs-toggle="modal" data-bs-target="#instructions"><i class="fa-solid fa-question"></i></a></div>
+                </div>
+              </nav>
+            <div class="container-fluid editions">
+              <!--V to P-->
+                <div class="v-to-p col-6 col-ed" id="V">
+                  <!--witness overlay-->
+                  <div class="witness-overlay" data-wit="V">
+                    <button class="close-overlay" aria-label="Close overlay">×</button>
+                    <h1>About the witness</h1>
+                    <h2>Identifier</h2>
+                    <ul>
+                      <li>Settlement: Vatican City</li>
+                      <li>Repository: Vatican City Library</li>
+                      <li>Idno: Vat.lat. 3210</li>
+                      <li>Name: V</li>
+                    </ul>
+                    <!-- <h2>Content</h2>
+                    <ul>
+                      <li>Locus: 91r-99v</li>
+                      <li>Analytic title: DI MESSER PIETRO BEMBO A MONSIGNORE MESSER GIULIO CARDINALE DE MEDICI DELLA VOLGAR LINGUA TERZO LIBRO.</li>
+                    </ul> -->
+                  </div>
+                  <div class="container-fluid d-flex justify-content-between manuscript-control">
+                    <a title="single view not available" class="disabled">Single view</a>
+                    <select id="ms-var-ctrl" title="select a correction layer">
+                      <option value="base-draft">Base draft</option>
+                      <option value="revision">Revision</option>
+                      <option value="final-text">Final text</option>
+                    </select>
+                    <div><a class="wit-info" data-wit="V">About the witness</a></div>
+                    </div>
+                    <div class="layer-div" id="base-draft">
+                    <div class="chapter" id="chapter_4">
+                    <div class="comma" id="comma_IV_1"><b>[IV 1]</b><span class="variant substantial elaboration" data-id="chap4_com1_E1" title="Rendered from TEI &lt;rdg&gt; element">Havea cosi detto il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a>: quando <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">mio Fratello</a> in questa maniera prese a dire.</div>
+                    <div class="comma" id="comma_IV_2"><b>[IV 2]</b><span class="dialogue" data-who="CB" data-towhom="GM">Egli non si pare che cosi sia <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a>, come voi dite; che nella <span type="variant paragraphemic" data-id="chap4_com2_E1">I.</span> tutti i nomi del maschio forniscano; i-quali nel numero del piu <span class="page-number">[95v]</span> si mandan fuori, almeno <span class="omograph tooltip-container" data-ana="prep-art-pm">ne<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: <span class="variant paragraphemic" data-id="chap4_com2_E2">concio sia</span> cosa che si legga <br/><q class="block" data-bibl="bibl_02c">Togliendo gli-animá, che sono in terra:</q></div>
+                    <div class="comma" data-number="comma_IV_3"><b>[IV 3]</b> et  <span class="variant paragraphemic omission" data-id="chap4_com3_E1"></span> <q class="block" data-bibl="bibl_03a">Che v'eran di lacciuó forme si nove:</q> dove si vede, che Animá et Lacciuó sono voci del numero del piu: et nondimeno nella <span class="variant paragraphemic" data-id="chap4_com3_E2">I.</span> non forniscono.</div>
+                    <div class="comma" dara-number="comma_IV_4"><b>[IV 4]</b> Et similmente in ogni poeta ve ne <span class="variant substantial elaboration" data-id="chap4_com4_E1" title="Rendered from TEI &lt;rdg&gt; element">son</span> <span class="variant paragraphemic" data-id="chap4_com4_E2">dellaltre</span>, et in questi medesimi altresì.</div>
+                    <div class="comma" data-number="comma_IV_5"><b>[IV 5]</b> Dunque a ffine che <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M. Hercole</a> a questi versi, o ad altri a questi simili avenendosi non istea sospeso; scioglietegli questo picciol dubbio, et fategliele chiaro.</span></div>
+                    <div class="comma" data-number="comma_IV_6"><b>[IV 6]</b> Per-che il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> a queste parole rispondendo cosi disse.</div>
+                    <div class="comma" data-number="comma_IV_7"><b>[IV 7]</b> Queste voci <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M. Hercole</a>, <span class="variant substantial elaboration" data-id="chap4_com7_E1" title="Rendered from TEI &gt;rdg&lt; and inner &lt;subst&gt; element">che hora il <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">Bembo</a> <span class="deletion">dire</span> <span class="addition">da <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a> et dal <a class="persname" id="FP" data-label="Francesco Petrarca" data-authority="http://viaf.org/viaf/39382430">Petrarcha</a> ci-arreca</span>;</span> voci intere non sono: anzi son fatte tali dalla licenza <span class="omograph tooltip-container" data-ana="prep_art_pm">de<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: <span class="variant paragraphemic" data-id="chap4_com7_E2">laquale</span> da questa parte nondimeno è leggiera: Che il tor via di loro le due ultime lettere niuna disparutezza si vede che <span class="variant paragraphemic" data-id="chap4_com7_E3">genera.</span> et peraventura direbbe alcuno, che vi si giugne et accresce vaghezza così facendo.</div>
+                    <div class="comma" data-number="comma_IV_8"><b>[IV 8]</b> Et io vi ragionava delle intere; <span class="page-number">[96r]</span> che in queste due, <span class="sample-words">Animali</span> et <span class="sample-words">Lacciuoli</span> sono: <span class="variant paragraphemic" data-id="chap4_com8_E1">dellequali</span> le due ultime lettere sono si deboli; che poco perdono <span class="variant paragraphemic omission" data-id="chap4_com2_E2"></span>  le dette voci da questo canto.</div>
+                    <div class="comma" data-number="comma_IV_9"><b>[IV 9]</b> Et sono tuttavia di quelli; che nella scrittura niente voglioono che si lievi di loro: anzi si lascino intere: <span class="variant paragraphemic" data-id="chap4_com9_E1">Quantunque</span> poscia leggendo il verso cosi le mandan fuori; come voi fatte havete.</div>
+                    <div class="comma" data-id="comma_IV_10"><b>[IV 10]</b> Il-che si fa medesimamente in quelle voci; che con tre vocali finiscono: le-quali tutte interamente si scrivono; et nondimeno alle volte si leggono et proferiscono non intere; o del maschio che elle siano; o della femina;</div>
+                    <div class="comma" data-number="comma_IV_11"><b>[IV 11]</b> <q class="block" data-bibl="bibl_02d">Non era vinto anchora monte Malo<br/><span class="variant substantial elaboration" data-id="chap4_com11_E1" title="Rendered from TEI &lt;rdg&gt; element">dal</span> nostro uccellatoio; che <span class="chap4_com11_E2">come è</span> vinto<br/>Nel montar su, cosi sara nel calo.</q><br/> et anchora,</div>
+                    <div class="comma" data-number="comma_IV_12"><b>[IV 12]</b> <span class="variant substantial" data-id="chap4_com12_E1" title="Rendered from TEI &lt;rdg&gt; element"><q class="block variant substantial" data-bibl="bibl_02a" title="Rendered from TEI &lt;rdg&gt; element">Ma tu non fosti si ver testimonio<br/>La've del ver a Troia fosti richiesto.</q></span> Ne solo <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a>; ma gli-altri Thoscani poeti anchora questa licenza si presero in altre cosi fatte voci.</span></div>
+                    <div class="comma" data-number="comma_IV_13"><b>[IV 13]</b> <span class="page-number">[96v]</span> <span class="dialogue">Niuna <span class="variant substantial elaboration" data-id="chap4_com13_E1" title="Rendered from TEI &lt;rdg&gt; element">licenza</span></span>, disse allhora a ccio framettendosi <a class="persname" data-label="Federigo Fregoso" id="FF" data-authority="http://viaf.org/viaf/24522590">M. Federigo</a>. <span class="dialogue">che nuova fosse, si presero i vostri poeti <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a> nel cosi fare, come havete detto.</span></div>
+                    <div class="comma" data-number="comma_IV_14"><b>[IV 14]</b> <span class="dialogue">Percioche vie di lor prima i Provenzali cosi facevano: che <span class="sample-words">Gioia</span>, <span class="sample-words">Noia</span> essi senza la vocale ultima <span class="variant substantial elaboration" data-id="chap4_com14_E1" title="Rendered from TEI &lt;rdg&gt; element">scriveano</span>; et <span class="variant paragraphemic" data-id="chap4_com14_E2">duna</span> sillaba <span class="variant substantial elaboration" data-id="chap4_com14_E3" title="Rendered from TEI &lt;rdg&gt; element">esser</span> la ne facevano.</span></div>
+                    <div class="comma" data-number="comma_IV_15"><b>[IV 15]</b> <span class="dialogue">Et cio usavano in quelle voci; che da noi con le tre vocali nella detta guisa favellando si mandan fuori.</span></div>
+                    <div class="comma" data-number="comma_IV_16"><b>[IV 16]</b> Il-che da essi togliendo, si come da loro maestri, disse <a class="persname" id="LdU" data-label="Lupo degli Uberti" data-authority="https://viaf.org/en/viaf/126170858621407682138">Lupo</a> <span class="variant paragraphemic" data-id="chap4_com16_E1">degli Uberti</span> in un verso rotto delle sue canzoni cosi, <q class="block" data-bibl="bibl_04a">Ch'altra gioia non m'è cara</q></div>
+                    <div class="comma" data-number="comma_IV_17"><b>[IV 17]</b> <span class="dialogue"><span class="variant substantial omission" data-id="chap4_com17_E1" title="Rendered from TEI &lt;rdg&gt; element"></span></span></div>
+                    <div class="comma" data-number="comma_IV_18"><b>[IV 18]</b> et il <a class="persname" id="GB" data-label="Giovanni Boccaccio" data-authority="http://viaf.org/viaf/64002165">Boccaccio</a> in uno intero delle sue <span class="variant substantial omission" data-id="chap4_com18_E1" title="Rendered from TEI &lt;rdg&gt; element"> </span> cosi, <q class="block" data-bibl="bibl_01c"><span class="variant paragraphemic" data-id="chap4_com18_E3">Ondel</span> viver m'è noia; <span class="omograph tooltip-container" data-ana="conj">ne<span class="tooltip-text">PoS: conjunction</span></span> so morire.</q></div>
+                    <div class="comma" data-number="comma_IV_19"><b>[IV 19]</b> <span class="dialogue">Et <span class="variant paragraphemic" data-id="chap4_com19_E1">dellaltre</span> voci anchora <a class="transpo-across" id="transpo-1-orig" href="#transpo-1-lem" title="Rendered from TEI &lt;rdg&gt; element">medesimamente</a> dissero i nostri poeti di questa maniera, <q class="block" data-bibl="bibl_06a">Ecco Cin da Pistoia, Guitton d'Arezzo,</q> et simili.</span> Et questo detto si tacque.</div>
+                    <div></div>
+                    </div>
+                    </div>
+                    <div id="revision" class="d-none layer-div">
+                    <div class="chapter" id="chapter_4">
+                    <div class="comma" id="comma_IV_1"><b>[IV 1]</b> <span class="variant substantial elaboration" data-id="chap4_com1_E1" title="Rendered from TEI &lt;rdg&gt; and &lt;mod&gt; elements"><b>(1)</b> Havea cosi detto il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a>: quando <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">mio fratello</a> in questa maniera prese a dire <b>(2)</b> Detto che cosi hebbe il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> per picciolo spatio fermatosi, et poscia passare ad altro <span class="variant paragraphemic" data-id="chap4_com1_E2">volendo:</span> <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">mio Fratello</a> cosi prese a dire.</span></div>
+                    <div class="comma" id="comma_IV_2"><b>[IV 2]</b> <span class="dialogue" data-who="CB" data-towhom="GM">Egli non si pare che cosi sia <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a>, come voi dite; che nella <span type="variant paragraphemic" data-id="chap4_com2_E1">I.</span> tutti i nomi del maschio forniscano; i-quali nel numero del piu <span class="page-number">[95v]</span> si mandan fuori, almeno <span class="omograph tooltip-container" data-ana="prep-art-pm">ne<span class="tooltip-text">PoS: Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: <span class="variant paragraphemic" data-id="chap4_com2_E2">concio sia</span> cosa che si legga <br/><q class="block" data-bibl="bibl_02c">Togliendo gli-animá, che sono in terra:</q></div>
+                    <div class="comma" data-number="comma_IV_3"><b>[IV 3]</b> et <span class="variant paragraphemic omission" data-id="chap4_com3_E1"></span> <q class="block" data-bibl="bibl_03a">Che v'eran di lacciuó forme si nove:</q> dove si vede, che Animá et Lacciuó sono voci del numero del piu: et nondimeno nella <span class="variant paragraphemic" data-id="chap4_com3_E2">I.</span> non forniscono.</div>
+                    <div class="comma" dara-number="comma_IV_4"><b>[IV 4]</b> Et similmente in ogni poeta ve ne <span class="variant substantial elaboration" data-id="chap4_com4_E1" title="Rendered from TEI &lt;rdg&gt; and &lt;mod&gt; elements"><b>(1)</b> son <b>(2)</b> sono</span> <span class="variant paragraphemic" data-id="chap4_com4_E2">dellaltre</span>, et in questi medesimi altresì.</div>
+                    <div class="comma" data-number="comma_IV_5"><b>[IV 5]</b> Dunque a ffine che <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M.Hercole</a> a questi versi, o ad altri a questi simili avenendosi non istea sospeso; scioglietegli questo picciol dubbio, et fategliele chiaro.</span></div>
+                    <div class="comma" data-number="comma_IV_6"><b>[IV 6]</b> Per-che il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> a queste parole rispondendo cosi disse.</div>
+                    <div class="comma" data-number="comma_IV_7"><b>[IV 7]</b> Queste voci <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M. Hercole</a>, <span class="variant substantial elaboration" data-id="chap4_com7_E1" title="Rendered from TEI &lt;rdg&gt;, &lt;mod&gt; and inner transcriptional elements">che hora il <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">Bembo</a> <span class="deletion">dire</span><span class="addition">da <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a> et dal <a class="persname" id="FP" data-label="Francesco Petrarca" data-authority="http://viaf.org/viaf/39382430">Petrarcha</a> ci-arreca</span>;</span> voci intere non sono: anzi son fatte tali dalla licenza <span class="omograph tooltip-container" data-ana="prep_art_pm">de<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: <span class="variant paragraphemic" data-id="chap4_com7_E2">laquale</span> da questa parte nondimeno è leggiera: Che il tor via di loro le due ultime lettere niuna disparutezza si vede che <span class="variant paragraphemic" data-id="chap4_com7_E3">genera.</span> et peraventura direbbe alcuno, che vi si giugne et accresce vaghezza così facendo.</div>
+                    <div class="comma" data-number="comma_IV_8"><b>[IV 8]</b> Et io vi ragionava delle intere; <span class="page-number">[96r]</span> che in queste due, <span class="sample-words">Animali</span> et <span class="sample-words">Lacciuoli</span> sono: <span class="variant paragraphemic" data-id="chap4_com8_E1">dellequali</span> le due ultime lettere sono si deboli; che poco perdono <span class="variant paragraphemic omission" data-id="chap4_com2_E2"></span>  le dette voci da questo canto.</div>
+                    <div class="comma" data-number="comma_IV_9"><b>[IV 9]</b> Et sono tuttavia di quelli; che nella scrittura niente voglioono che si lievi di loro: anzi si lascino intere: <span class="variant paragraphemic" data-id="chap4_com9_E1">Quantunque</span> poscia leggendo il verso cosi le mandan fuori; come voi fatte havete.</div>
+                    <div class="comma" data-id="comma_IV_10"><b>[IV 10]</b> Il-che si fa medesimamente in quelle voci; che con tre vocali finiscono: le-quali tutte interamente si scrivono; et nondimeno alle volte si leggono et proferiscono non intere; o del maschio che elle siano; o della femina;</div>
+                    <div class="comma" data-number="comma_IV_11"><b>[IV 11]</b> <q class="block" data-bibl="bibl_02d">Non era vinto monte Malo<br/><span class="variant substantial elaboration" data-id="chap4_com11_E1" title="Rendered from TEI &lt;rdg&gt; and &lt;mod&gt; elements"><b>(1)</b> dal <b>(2)</b> Dal</span> nostro uccellatoio; che <span class="chap4_com11_E2"><b>1</b> come è <b>2</b> com'è</span> vinto<br/>Nel montar su, cosi sara nel calo.</q><br/> et anchora,</div>
+                    <div class="comma" data-number="comma_IV_12"><b>[IV 12]</b> <span class="variant substantial" data-id="chap4_com12_E1" title="Rendered from TEI &lt;rdg&gt; element"><q class="block variant substantial" data-bibl="bibl_02a">Ma tu non fosti si ver testimonio<br/>La've del ver a Troia fosti richiesto.</q></span> Ne solo <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a>; ma gli-altri Thoscani poeti anchora questa licenza si presero in altre cosi fatte voci.</span></div>
+                    <div class="comma" data-number="comma_IV_13"><b>[IV 13]</b> <span class="page-number">[96v]</span> <span class="dialogue">Niuna <span class="variant substantial elaboration" data-id="chap4_com13_E1" title="Rendered from TEI &lt;rdg&gt; and &lt;mod&gt; elements"><b>(1)</b> licenza <b>(2)</b> licentia</span></span>, disse allhora a ccio framettendosi <a class="persname" data-label="Federigo Fregoso" id="FF" data-authority="http://viaf.org/viaf/24522590">M. Federigo</a>. <span class="dialogue">che nuova fosse, si presero i vostri poeti <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a> nel cosi fare, come havete detto.</span></div>
+                    <div class="comma" data-number="comma_IV_14"><b>[IV 14]</b> <span class="dialogue">Percioche vie di lor prima i Provenzali cosi facevano: che <span class="sample-words">Gioia</span>, <span class="sample-words">Noia</span> essi senza la vocale ultima <span class="variant substantial elaboration" data-id="chap4_com14_E1" title="Rendered from TEI &lt;rdg&gt; and &lt;mod&gt; elements"><b>(1)</b> scriveano <b>(2)</b> scrivevano</span>; et <span class="variant paragraphemic" data-id="chap4_com14_E2">duna</span> sillaba <span class="variant substantial elaboration" data-id="chap4_com14_E3" title="Rendered from TEI &lt;rdg&gt; and &lt;mod&gt; elements"><b>(1)</b> esser <b>(2)</b> essere</span> la ne facevano.</span></div>
+                    <div class="comma" data-number="comma_IV_15"><b>[IV 15]</b> <span class="dialogue">Et cio usavano in quelle voci; che da noi con le tre vocali nella detta guisa favellando si mandan fuori.</span></div>
+                    <div class="comma" data-number="comma_IV_16"><b>[IV 16]</b> Il-che da essi togliendo, si come da loro maestri, disse <a class="persname" id="LdU" data-label="Lupo degli Uberti" data-authority="https://viaf.org/en/viaf/126170858621407682138">Lupo</a> <span class="variant paragraphemic" data-id="chap4_com16_E1">degli Uberti</span> in un verso rotto delle sue canzoni cosi, <q>Ch'altra gioia non m'è cara</q></div>
+                    <div class="comma" data-number="comma_IV_17"><b>[IV 17]</b> <span class="dialogue"><span class="variant substantial" data-id="chap4_com17_E1" title="Rendered from TEI &lt;mod&gt; and inner transcriptional elements">+++et il <a class="persname" id="RE" data-label="Enzo di Sardegna" data-authority="https://viaf.org/en/viaf/103146094161100330582">Re Enzo</a> in <span class="variant paragraphemic" data-id="chap4_com17_E2">un altro</span> <span class="deletion">de suoi</span>, <q class="block variant substantial" data-bibl="bibl_05a" title="Rendered from TEI &lt;mod&gt; element">Per meo servir non veggio<br/>Che gioia mi se n'accresca<br/></q>+++</span></span></div>
+                    <div class="comma" data-number="comma_IV_18"><b>[IV 18]</b> et il <a class="persname" id="GB" data-label="Giovanni Boccaccio" data-authority="http://viaf.org/viaf/64002165">Boccaccio</a> in uno intero delle sue <span class="variant substantial omission" data-id="chap4_com18_E1" title="Rendered from TEI &lt;rdg&gt; element">  </span> <span class="variant substantial transpo-within" data-id="chap4_com18_E2" href="#transpo-1-orig" title="Rendered from TEI &lt;mod&gt; elements">medesimamente</span> cosi, <q class="block" data-bibl="bibl_01c"><span class="variant paragraphemic" data-id="chap4_com18_E3">Ondel</span> viver m'è noia; <span class="omograph tooltip-container" data-ana="conj">ne<span class="tooltip-text">PoS: conjunction</span></span> so morire.</q></div>
+                    <div class="comma" data-number="comma_IV_19"><b>[IV 19]</b> <span class="dialogue">Et <span class="variant paragraphemic" data-id="chap4_com19_E1">dellaltre</span> voci anchora <span class="transpo-within" id="transpo-1-orig" title="Rendered from TEI text anchor">[orig. loc.]</span> dissero i nostri poeti di questa maniera, <q class="block" data-bibl="bibl_06a">Ecco Cin da Pistoia, Guitton d'Arezzo,</q> et simili.</span> Et questo detto si tacque.</div>
+                    <div></div>
+                    </div>
+                    </div>
+                    <div id="final-text" class="d-none layer-div">
+                    <div class="chapter" id="chapter_4">
+                    <div class="comma" id="comma_IV_1"><b>[IV 1]</b> <span class="variant substantial elaboration" data-id="chap4_com1_E1" title="Rendered from TEI &lt;mod&gt; element">Detto che cosi hebbe il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> per picciolo spatio fermatosi, et poscia passare ad altro <span class="variant paragraphemic" data-id="chap4_com1_E2">volendo:</span> <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">mio Fratello</a> cosi prese a dire.</span></div>
+                    <div class="comma" id="comma_IV_2"><b>[IV 2]</b> <span class="dialogue" data-who="CB" data-towhom="GM">Egli non si pare che cosi sia <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a>, come voi dite; che nella <span type="variant paragraphemic" data-id="chap4_com2_E1">I.</span> tutti i nomi del maschio forniscano; i-quali nel numero del piu <span class="page-number">[95v]</span> si mandan fuori, almeno <span class="omograph tooltip-container" data-ana="prep-art-pm">ne<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: <span class="variant paragraphemic" data-id="chap4_com2_E2">concio sia</span> cosa che si legga <br/><q class="block" data-bibl="bibl_02c">Togliendo gli-animá, che sono in terra:</q></div>
+                    <div class="comma" data-number="comma_IV_3"><b>[IV 3]</b> et <span class="variant paragraphemic omission" data-id="chap4_com3_E1"></span> <q class="block" data-bibl="bibl_03a">Che v'eran di lacciuó forme si nove:</q> dove si vede, che Animá et Lacciuó sono voci del numero del piu: et nondimeno nella <span class="variant paragraphemic" data-id="chap4_com3_E2">I.</span> non forniscono.</div>
+                    <div class="comma" dara-number="comma_IV_4"><b>[IV 4]</b> Et similmente in ogni poeta ve ne <span class="variant substantial elaboration" data-id="chap4_com4_E1" data-id="chap4_com1_E1" title="Rendered from TEI &lt;mod&gt; element">sono</span> <span class="variant paragraphemic" data-id="chap4_com4_E2">dellaltre</span>, et in questi medesimi altresì.</div>
+                    <div class="comma" data-number="comma_IV_5"><b>[IV 5]</b> Dunque a ffine che <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M.Hercole</a> a questi versi, o ad altri a questi simili avenendosi non istea sospeso; scioglietegli questo picciol dubbio, et fategliele chiaro.</span></div>
+                    <div class="comma" data-number="comma_IV_6"><b>[IV 6]</b> Per-che il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> a queste parole rispondendo cosi disse.</div>
+                    <div class="comma" data-number="comma_IV_7"><b>[IV 7]</b> Queste voci <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M. Hercole</a>, <span class="variant substantial elaboration" data-id="chap4_com7_E1" data-id="chap4_com1_E1" title="Rendered from TEI &lt;mod&gt; and inner &lt;add;&gt; elements">che hora il <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">Bembo</a> da <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a> et dal <a class="persname" id="FP" data-label="Francesco Petrarca" data-authority="http://viaf.org/viaf/39382430">Petrarcha</a> ci-arreca;</span> voci intere non sono: anzi son fatte tali dalla licenza <span class="omograph tooltip-container" data-ana="prep_art_pm">de<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: <span class="variant paragraphemic" data-id="chap4_com7_E2">laquale</span> da questa parte nondimeno è leggiera: Che il tor via di loro le due ultime lettere niuna disparutezza si vede che <span class="variant paragraphemic" data-id="chap4_com7_E3">genera.</span> et peraventura direbbe alcuno, che vi si giugne et accresce vaghezza così facendo.</div>
+                    <div class="comma" data-number="comma_IV_8"><b>[IV 8]</b> Et io vi ragionava delle intere; <span class="page-number">[96r]</span> che in queste due, <span class="sample-words">Animali</span> et <span class="sample-words">Lacciuoli</span> sono: <span class="variant paragraphemic" data-id="chap4_com8_E1">dellequali</span> le due ultime lettere sono si deboli; che poco perdono <span class="variant paragraphemic omission" data-id="chap4_com2_E2"></span>  le dette voci da questo canto.</div>
+                    <div class="comma" data-number="comma_IV_9"><b>[IV 9]</b> Et sono tuttavia di quelli; che nella scrittura niente voglioono che si lievi di loro: anzi si lascino intere: <span class="variant paragraphemic" data-id="chap4_com9_E1">Quantunque</span> poscia leggendo il verso cosi le mandan fuori; come voi fatte havete.</div>
+                    <div class="comma" data-id="comma_IV_10"><b>[IV 10]</b> Il-che si fa medesimamente in quelle voci; che con tre vocali finiscono: le-quali tutte interamente si scrivono; et nondimeno alle volte si leggono et proferiscono non intere; o del maschio che elle siano; o della femina;</div>
+                    <div class="comma" data-number="comma_IV_11"><b>[IV 11]</b> <q class="block" data-bibl="bibl_02d">Non era vinto anchora  monte Malo<br/><span class="variant substantial elaboration" data-id="chap4_com11_E1" data-id="chap4_com1_E1" title="Rendered from TEI &lt;mod&gt; element">Dal</span> nostro uccellatoio; che <span class="chap4_com11_E2">com'è</span> vinto<br/>Nel montar su, cosi sara nel calo.</q><br/> et anchora,</div>
+                    <div class="comma" data-number="comma_IV_12"><b>[IV 12]</b> <span class="variant substantial" data-id="chap4_com12_E1" data-id="chap4_com1_E1" title="Rendered from TEI &lt;rdg&gt; element"><q class="block variant substantial" data-bibl="bibl_02a">Ma tu non fosti si ver testimonio<br/>La've del ver a Troia fosti richiesto.</q></span> Ne solo <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a>; ma gli-altri Thoscani poeti anchora questa licenza si presero in altre cosi fatte voci.</span></div>
+                    <div class="comma" data-number="comma_IV_13"><b>[IV 13]</b> <span class="page-number">[96v]</span> <span class="dialogue">Niuna <span class="variant substantial elaboration" data-id="chap4_com13_E1" data-id="chap4_com1_E1" title="Rendered from TEI &lt;rdg&gt; element">licentia</span></span>, disse allhora a ccio framettendosi <a class="persname" data-label="Federigo Fregoso" id="FF" data-authority="http://viaf.org/viaf/24522590">M. Federigo</a>. <span class="dialogue">che nuova fosse, si presero i vostri poeti <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a> nel cosi fare, come havete detto.</span></div>
+                    <div class="comma" data-number="comma_IV_14"><b>[IV 14]</b> <span class="dialogue">Percioche vie di lor prima i Provenzali cosi facevano: che <span class="sample-words">Gioia</span>, <span class="sample-words">Noia</span> essi senza la vocale ultima <span class="variant substantial elaboration" data-id="chap4_com14_E1" data-id="chap4_com1_E1" title="Rendered from TEI &lt;mod&gt; element">scrivevano</span>; et <span class="variant paragraphemic" data-id="chap4_com14_E2">duna</span> sillaba <span class="variant substantial elaboration" data-id="chap4_com14_E3" data-id="chap4_com1_E1" title="Rendered from TEI &lt;mod&gt; element">essere</span> la ne facevano.</span></div>
+                    <div class="comma" data-number="comma_IV_15"><b>[IV 15]</b> <span class="dialogue">Et cio usavano in quelle voci; che da noi con le tre vocali nella detta guisa favellando si mandan fuori.</span></div>
+                    <div class="comma" data-number="comma_IV_16"><b>[IV 16]</b> Il-che da essi togliendo, si come da loro maestri, disse <a class="persname" id="LdU" data-label="Lupo degli Uberti" data-authority="https://viaf.org/en/viaf/126170858621407682138">Lupo</a> <span class="variant paragraphemic" data-id="chap4_com16_E1">degli Uberti</span> in un verso rotto delle sue canzoni cosi, <q class="block" data-bibl="bibl_04a">Ch'altra gioia non m'è cara</q></div>
+                    <div class="comma" data-number="comma_IV_17"><b>[IV 17]</b> <span class="dialogue"><span class="variant substantial" data-id="chap4_com17_E1" data-id="chap4_com1_E1" title="Rendered from TEI &lt;mod&gt; element, excluding deletions">et il <a class="persname" id="RE" data-label="Enzo di Sardegna" data-authority="https://viaf.org/en/viaf/103146094161100330582">Re Enzo</a> in <span class="variant paragraphemic" data-id="chap4_com17_E2">un'altro</span>, <q class="block variant substantial" data-bibl="bibl_05a">Per meo servir non veggio<br/>Che gioia mi se n'accresca<br/></q></span></span></div>
+                    <div class="comma" data-number="comma_IV_18"><b>[IV 18]</b> et il <a class="persname" id="GB" data-label="Giovanni Boccaccio" data-authority="http://viaf.org/viaf/64002165">Boccaccio</a> in uno intero delle sue <span class="variant substantial transpo-across" data-id="chap4_com18_E2" data-id="chap4_com1_E1" title="Rendered from TEI &lt;mod&gt; element">medesimamente</span> cosi, <q class="block" data-bibl="bibl_01c"><span class="variant paragraphemic" data-id="chap4_com18_E3">Ondel</span> viver m'è noia; <span class="omograph tooltip-container" data-ana="conj">ne<span class="tooltip-text">PoS: conjunction</span></span> so morire.</q></div>
+                    <div class="comma" data-number="comma_IV_19"><b>[IV 19]</b> <span class="dialogue">Et <span class="variant paragraphemic" data-id="chap4_com19_E1">dellaltre</span> voci anchora dissero i nostri poeti di questa maniera, <q class="block" data-bibl="bibl_06a">Ecco Cin da Pistoia, Guitton d'Arezzo,</q> et simili.</span> Et questo detto si tacque.</div>
+                    <div></div>
+                    </div>
+                    </div>
+                  </div>
+                <div class="v-to-p col-6 col-ed" id="toPtext">
+                  <!--witness overlay-->
+                  <div class="witness-overlay" data-wit="P">
+                    <button class="close-overlay" aria-label="Close overlay">×</button>
+                    <h1>About the witness</h1>
+                    <h2>Identifier</h2>
+                    <ul>
+                      <li>Settlement: Florence</li>
+                      <li>Repository: Biblioteca Nazionale Centrale</li>
+                      <li>Idno: PALAT. Misc. 1.G.7.3</li>
+                      <li>Name: P</li>
+                    </ul>
+                    <!-- <h2>Content</h2>
+                    <ul>
+                      <li>Locus: 41r-45v</li>
+                      <li>Analytic title: DI MESSER PIETRO BEMBO A MONSIGNORE MESSER GIULIO CARDINALE DE MEDICI DELLA VOLGAR LINGUA. TERZO LIBRO.</li>
+                    </ul> -->
+                  </div>
+                  <div class="container-fluid d-flex justify-content-between printed-control">
+                    <a title="single view not available" class="disabled">Single view</a>
+                    <div><a class="wit-info" data-wit="P">About the witness</a></div>
+                    </div>
+                    <div id="p-text">
+                    <div class="chapter" id="chapter_4">
+                    <div class="comma" id="comma_IV_1"><b>[IV 1]</b> <span class="variant substantial" data-id="chap4_com1_E1" data-id="chap4_com1_E1" title="Rendered from TEI &lt;lem&gt; element">Detto che cosi hebbe il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> per picciolo spatio fermatosi, et poscia passare ad altro <span class="variant paragraphemic" data-id="chap4_com1_E2">volendo,</span> <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">mio Fratello</a> cosi prese a dire.</span></div>
+                    <div class="comma" id="comma_IV_2"><b>[IV 2]</b> <span class="dialogue" data-who="CB" data-towhom="GM">Egli non si pare che cosi sia <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a>, come voi dite; che nella <span type="variant paragraphemic" data-id="chap4_com2_E1">I.</span> tutti i nomi del maschio forniscano; i-quali nel numero del piu si mandan fuori, almeno <span class="omograph tooltip-container" data-ana="prep-art-pm">ne<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: <span class="variant paragraphemic" data-id="chap4_com2_E2">conciosia</span> cosa che si legga <br/><q class="block" data-bibl="bibl_02c">Togliendo gli-animá, che sono in terra:</q></div>
+                    <div class="comma" data-number="comma_IV_3"><b>[IV 3]</b> et <span class="variant substantial" data-id="chap4_com3_E1" title="Rendered from TEI &lt;lem&gt; element">anchora,</span> <q class="block" data-bibl="bibl_03a">Che v'eran di lacciuó forme si nove:</q> dove si vede, che Animá et Lacciuó sono voci del numero del piu: et nondimeno nella <span class="variant paragraphemic" data-id="chap4_com3_E2">.I.</span> non forniscono.</div>
+                    <div class="comma" dara-number="comma_IV_4"><b>[IV 4]</b> Et similmente in ogni poeta ve ne <span class="variant substantial" data-id="chap4_com4_E1" title="Rendered from TEI &lt;lem&gt; element">sono</span> <span class="variant paragraphemic" data-id="chap4_com4_E2">dell'altre</span>, et in questi medesimi altresì.</div>
+                    <div class="comma" data-number="comma_IV_5"><b>[IV 5]</b> Dunque a ffine che <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M.Hercole</a> a questi versi, o ad altri a questi simili avenendosi non istea sospeso; scioglietegli questo picciol dubbio, et fategliele chiaro.</span></div>
+                    <div class="comma" data-number="comma_IV_6"><b>[IV 6]</b> Per-che il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> a queste parole rispondendo cosi disse.</div>
+                    <div class="comma" data-number="comma_IV_7"><b>[IV 7]</b> Queste voci <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M. Hercole</a>, <span class="variant substantial" data-id="chap4_com7_E1" title="Rendered from TEI &lt;lem&gt; element">che hora il <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">Bembo</a> da <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a> et dal <a class="persname" id="FP" data-label="Francesco Petrarca" data-authority="http://viaf.org/viaf/39382430">Petrarcha</a> ci-arreca;</span> voci intere non sono: anzi son fatte tali dalla licenza <span class="omograph tooltip-container" data-ana="prep_art_pm">de<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: <span class="variant paragraphemic" data-id="chap4_com7_E2">La-quale</span> da questa parte nondimeno è leggiera: Che il <span class="page-number">[45v]</span> tor via di loro le due ultime lettere niuna disparutezza si vede che <span class="variant paragraphemic" data-id="chap4_com7_E3">genera:</span> et peraventura direbbe alcuno, che vi si giugne et accresce vaghezza così facendo.</div>
+                    <div class="comma" data-number="comma_IV_8"><b>[IV 8]</b>Et io vi ragionava delle intere; che in queste due, <span class="sample-words">Animali</span> et <span class="sample-words">Lacciuoli</span> sono: <span class="variant paragraphemic" data-id="chap4_com8_E1">delle quali</span> le due ultime lettere sono si deboli; che poco perdono <span class="variant substantial" data-id="chap4_com2_E2" title="Rendered from TEI &lt;lem&gt; element">, se pure non acquistano,</span> le dette voci da questo canto.</div>
+                    <div class="comma" data-number="comma_IV_9"><b>[IV 9]</b> Et sono tuttavia di quelli; che nella scrittura niente voglioono che si lievi di loro: anzi si lascino intere: <span class="variant paragraphemic" data-id="chap4_com9_E1">quantunque</span> poscia leggendo il verso cosi le mandan fuori; come voi fatte havete.</div>
+                    <div class="comma" data-id="comma_IV_10"><b>[IV 10]</b> Il-che si fa medesimamente in quelle voci; che con tre vocali finiscono: le-quali tutte interamente si scrivono; et nondimeno alle volte si leggono et proferiscono non intere; o del maschio che elle siano, o della femina;</div>
+                    <div class="comma" data-number="comma_IV_11"><b>[IV 11]</b> <q class="block" data-bibl="bibl_02d">Non era vinto anchora  monte Malo<br/><span class="variant substantial" data-id="chap4_com11_E1" title="Rendered from TEI &lt;lem&gt; element">Dal</span> nostro uccellatoio; che <span class="chap4_com11_E2">com'è</span> vinto<br/>Nel montar su, cosi sara nel calo.</q><br/> et anchora,</div>
+                    <div class="comma" data-number="comma_IV_12"><b>[IV 12]</b> <span class="variant substantial" data-id="chap4_com12_E1" title="Rendered from TEI &lt;lem&gt; element"><q class="block variant substantial" data-bibl="bibl_02e">Lasciala tal, che di qui a mill'anni<br/>Ne lo stato primaio non si rinselva.</q></span> Ne solo <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a>; ma gli-altri Thoscani poeti anchora questa licenza si presero in altre cosi fatte voci.</span></div>
+                    <div class="comma" data-number="comma_IV_13"><b>[IV 13]</b> <span class="dialogue">Niuna <span class="variant substantial" data-id="chap4_com13_E1" title="Rendered from TEI &lt;lem&gt; element">licentia</span></span>, disse allhora a ccio framettendosi <a class="persname" data-label="Federigo Fregoso" id="FF" data-authority="http://viaf.org/viaf/24522590">M. Federigo</a>. <span class="dialogue">che nuova fosse, si presero i vostri poeti <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a> nel cosi fare, come havete detto.</span></div>
+                    <div class="comma" data-number="comma_IV_14"><b>[IV 14]</b> <span class="dialogue">Percioche vie di lor prima i Provenzali cosi facevano: che <span class="sample-words">Gioia</span>, <span class="sample-words">Noia</span> essi senza la vocale ultima <span class="variant substantial" data-id="chap4_com14_E1" title="Rendered from TEI &lt;lem&gt; element">scriveano</span>; et <span class="variant paragraphemic" data-id="chap4_com14_E2">d'una</span> sillaba <span class="variant substantial" data-id="chap4_com14_E3" title="Rendered from TEI &lt;lem&gt; element">essere</span> la ne facevano.</span></div>
+                    <div class="comma" data-number="comma_IV_15"><b>[IV 15]</b> <span class="dialogue">Et cio usavano in quelle voci; che da noi con le tre vocali nella detta guisa favellando si mandan fuori.</span></div>
+                    <div class="comma" data-number="comma_IV_16"><b>[IV 16]</b> Il-che da essi togliendo, si come da loro maestri, disse <a class="persname" id="LdU" data-label="Lupo degli Uberti" data-authority="https://viaf.org/en/viaf/126170858621407682138">Lupo</a> <span class="variant paragraphemic" data-id="chap4_com16_E1">de gli-Uberti</span> in un verso rotto delle sue canzoni cosi, <q class="block" data-bibl="bibl_04a">Ch'altra gioia non m'è cara</q></div>
+                    <div class="comma" data-number="comma_IV_17"><b>[IV 17]</b> <span class="dialogue"><span class="variant substantial" data-id="chap4_com17_E1" title="Rendered from TEI &lt;lem&gt; element">et il <a class="persname" id="RE" data-label="Enzo di Sardegna" data-authority="https://viaf.org/en/viaf/103146094161100330582">Re Enzo</a> in <span class="variant paragraphemic" data-id="chap4_com17_E2">un'altro</span>, <q class="block variant substantial" data-bibl="bibl_05a">Per meo servir non veggio<br/>Che gioia mi se n'accresca<br/></q></span></span></div>
+                    <div class="comma" data-number="comma_IV_18"><b>[IV 18]</b> et il <a class="persname" id="GB" data-label="Giovanni Boccaccio" data-authority="http://viaf.org/viaf/64002165">Boccaccio</a> in uno intero delle sue <span class="variant substantial" data-id="chap4_com18_E1" title="Rendered from TEI &lt;lem&gt; element">ballate</span> <a class="variant substantial transpo-across" id="transpo-1-lem" data-id="chap4_com18_E2" href="#transpo-1-orig" title="Rendered from TEI &lt;lem&gt; element">medesimamen <span class="page-number">[45v]</span> te</a> cosi, <q class="block" data-bibl="bibl_01c"><span class="variant paragraphemic" data-id="chap4_com18_E3">Onde'l</span> viver m'è noia; <span class="omograph tooltip-container" data-ana="conj">ne<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> so morire.</q></div>
+                    <div class="comma" data-number="comma_IV_19"><b>[IV 19]</b> <span class="dialogue">Et dell'altre voci anchora dissero i nostri poeti di questa maniera, <q class="block" data-bibl="bibl_06a">Ecco Cin da Pistoia, Guitton d'Arezzo,</q> et simili.</span> Et questo detto si tacque.</div>
+                    </div>
+                  </div>
+                </div>
+                <!--P to T-->
+                <div class="p-to-t col-4 col-ed d-none" id="Pon">
+                  <!--witness overlay-->
+                  <div class="witness-overlay" data-wit="P2">
+                    <button class="close-overlay" aria-label="Close overlay">×</button>
+                    <h1>About the witness</h1>
+                    <h2>Identifier</h2>
+                    <ul>
+                      <li>Settlement: Florence</li>
+                      <li>Repository: Biblioteca Nazionale Centrale</li>
+                      <li>Idno: PALAT. Misc. 1.G.7.3</li>
+                      <li>Name: P</li>
+                    </ul>
+                    <!-- <h2>Content</h2>
+                    <ul>
+                      <li>Locus: 41r-45v</li>
+                      <li>Analytic title: DI MESSER PIETRO BEMBO A MONSIGNORE MESSER GIULIO CARDINALE DE MEDICI DELLA VOLGAR LINGUA. TERZO LIBRO.</li>
+                    </ul> -->
+                  </div>
+                  <div class="container-fluid d-flex justify-content-between printed-control">
+                    <a title="single view not available" class="disabled">Single view</a>
+                    <div><a class="wit-info" data-wit="P2">About the witness</a></div>
+                    </div>
+                    <div class="chapter" id="chapter_4">
+                    <div class="comma" id="comma_IV_1"><b>[IV 1]</b> Detto che cosi hebbe il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> per picciolo spatio fermatosi, et poscia passare ad altro volendo, <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">mio Fratello</a> cosi prese a dire.</div>
+                    <div class="comma" id="comma_IV_2"><b>[IV 2]</b> <span class="dialogue" data-who="CB" data-towhom="GM">Egli non si pare che cosi sia <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a>, come voi dite; che nella .I. tutti i nomi del maschio forniscano; i-quali nel numero del piu si mandan fuori, almeno <span class="omograph tooltip-container" data-ana="prep-art-pm">ne<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: conciosia cosa che <span class="variant substantial" data-id="chap4_com2_E3" title="Rendered from TEI &lt;lem&gt; element">si legga</span> <br/><q class="block" data-bibl="bibl_02c">Togliendo gli-animá, che sono in terra:</q></div>
+                    <div class="comma" data-number="comma_IV_3"><b>[IV 3]</b> et anchora, <q class="block" data-bibl="bibl_03a">Che v'eran di lacciuó forme si nove:</q> dove si vede, che Animá et Lacciuó sono voci del numero del piu: et nondimeno nella .I. non forniscono.</div>
+                    <div class="comma" data-number="comma_IV_4"><b>[IV 4]</b> Et similmente in ogni poeta ve ne sono dell'altre, et in questi medesimi altresì.</div>
+                    <div class="comma" data-number="comma_IV_5"><b>[IV 5]</b> Dunque a ffine che <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M.Hercole</a> a questi versi, o ad altri a questi simili avenendosi non istea sospeso; scioglietegli questo picciol dubbio, et fategliele chiaro.</span></div>
+                    <div class="comma" data-number="comma_IV_6"><b>[IV 6]</b> Per-che il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> a queste parole rispondendo cosi disse.</div>
+                    <div class="comma" data-number="comma_IV_7"><b>[IV 7]</b> Queste voci <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M. Hercole</a>, <span class="variant substantial" data-id="chap4_com7_E1" title="Rendered from TEI &lt;lem&gt; element">che hora il <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">Bembo</a> da <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a> et dal <a class="persname" id="FP" data-label="Francesco Petrarca" data-authority="http://viaf.org/viaf/39382430">Petrarcha</a> ci-arreca;</span> voci intere non sono: anzi son fatte tali dalla licenza <span class="omograph tooltip-container" data-ana="prep_art_pm">de<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: La-quale da questa parte nondimeno è leggiera: Che il <span class="page-number">[45v]</span> tor via di loro le due ultime lettere niuna disparutezza si vede che genera: et peraventura direbbe alcuno, che vi si giugne et accresce vaghezza così facendo.</div>
+                    <div class="comma" data-number="comma_IV_8"><b>[IV 8]</b> Et io vi ragionava delle intere; che in queste due, <span class="sample-words">Animali</span> et <span class="sample-words">Lacciuoli</span> sono: delle quali le due ultime lettere sono si deboli; che poco perdono, se pure non acquistano, le dette voci da questo canto.</div>
+                    <div class="comma" data-number="comma_IV_9"><b>[IV 9]</b> Et sono tuttavia di quelli; che nella scrittura niente voglioono che si lievi di loro: anzi si lascino intere: quantunque poscia leggendo il verso cosi le mandan fuori; come voi fatte havete.</div>
+                    <div class="comma" data-id="comma_IV_10"><b>[IV 10]</b> Il-che si fa medesimamente in quelle voci; che con tre vocali finiscono: le-quali tutte interamente si scrivono; et nondimeno alle volte si leggono et proferiscono non intere; <span class="variant substantial" data-id="chap4_com10_E1" title="Rendered from TEI &lt;lem&gt; element">o del maschio che elle siano o della femina;</div>
+                    <div class="comma" data-number="comma_IV_11"><b>[IV 11]</b> <q class="block" data-bibl="bibl_02d">Non era vinto anchora monte Malo<br/>Dal nostro uccellatoio; che <span class="chap4_com11_E2">com'è</span> vinto<br/>Nel montar su, cosi sara nel calo.</q><br/> et anchora,</div>
+                    <div class="comma" data-number="comma_IV_12"><b>[IV 12]</b> <span class="variant substantial" data-id="chap4_com12_E1"><q class="block" data-bibl="bibl_02e">Lasciala tal, che di qui a mill'anni<br/>Ne lo stato primaio non si rinselva.</q></span> Ne solo <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a>; ma gli-altri Thoscani poeti anchora questa licenza si presero in altre cosi fatte voci.</span></div>
+                    <div class="comma" data-number="comma_IV_13"><b>[IV 13]</b> <span class="dialogue">Niuna licentia</span>, disse allhora a ccio framettendosi <a class="persname" data-label="Federigo Fregoso" id="FF" data-authority="http://viaf.org/viaf/24522590">M. Federigo</a>. <span class="dialogue">che nuova fosse, si presero i vostri poeti <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a> nel cosi fare, come havete detto.</span></div>
+                    <div class="comma" data-number="comma_IV_14"><b>[IV 14]</b> <span class="dialogue">Percioche vie di lor prima i Provenzali cosi facevano: che <span class="sample-words">Gioia</span>, <span class="sample-words">Noia</span> essi senza la vocale ultima scriveano; et d'una sillaba essere la ne facevano.</span></div>
+                    <div class="comma" data-number="comma_IV_15"><b>[IV 15]</b> <span class="dialogue">Et cio usavano in quelle voci; che da noi con le tre vocali nella detta guisa favellando si mandan fuori.</span></div>
+                    <div class="comma" data-number="comma_IV_16"><b>[IV 16]</b> Il-che da essi togliendo, si come da loro maestri, disse <a class="persname" id="LdU" data-label="Lupo degli Uberti" data-authority="https://viaf.org/en/viaf/126170858621407682138">Lupo</a> <span class="variant paragraphemic" data-id="chap4_com16_E1">de gli-Uberti</span> in un verso rotto delle sue canzoni cosi, <q class="block" data-bibl="bibl_04a">Ch'altra gioia non m'è cara</q></div>
+                    <div class="comma" data-number="comma_IV_17"><b>[IV 17]</b> <span class="dialogue">et il <a class="persname" id="RE" data-label="Enzo di Sardegna" data-authority="https://viaf.org/en/viaf/103146094161100330582">Re Enzo</a> in un'altro, <q class="block" data-bibl="bibl_05a">Per meo servir non veggio<br/>Che gioia mi se n'accresca<br/></q></span></span></div>
+                    <div class="comma" data-number="comma_IV_18"><b>[IV 18]</b> et il <a class="persname" id="GB" data-label="Giovanni Boccaccio" data-authority="http://viaf.org/viaf/64002165">Boccaccio</a> in uno intero delle sue ballate medesimamen <span class="page-number">[46r]</span> te cosi, <q class="block" data-bibl="bibl_01c">Onde'l viver m'è noia; <span class="omograph tooltip-container" data-ana="conj">ne<span class="tooltip-text">PoS: conjunction</span></span> so morire.</q></div>
+                    <div class="comma" data-number="comma_IV_19"><b>[IV 19]</b> <span class="dialogue">Et dell'altre voci anchora dissero i nostri poeti di questa maniera, <q class="block" data-bibl="bibl_06a">Ecco Cin da Pistoia, Guitton d'Arezzo,</q> et simili.</span> Et questo detto si tacque.</div>
+                  </div>
+                </div>
+                <div class="p-to-t col-4 col-ed d-none" id="M">
+                  <!--witness overlay-->
+                  <div class="witness-overlay" data-wit="M">
+                    <button class="close-overlay" aria-label="Close overlay">×</button>
+                    <h1>About the witness</h1>
+                    <h2>Identifier</h2>
+                    <ul>
+                      <li>Repository: Private collection</li>
+                      <li>Name: M</li>
+                    </ul>
+                    <!-- <h2>Content</h2>
+                    <ul>
+                      <li>Locus: 52r-57v</li>
+                      <li>Analytic title: DI MESSER PIETRO BEMBO A MONSIGNORE MESSER GIULIO CARDINALE DE MEDICI DELLA VOLGAR LINGUA. TERZO LIBRO.</li>
+                    </ul> -->
+                  </div>
+                  <div class="container-fluid d-flex justify-content-between printed-control">
+                    <a title="single view not available" class="disabled">Single view</a>
+                    <div><a class="wit-info" data-wit="M">About the witness</a></div>
+                    </div>
+                    <div class="chapter" id="chapter_4">
+                    <div class="comma" id="comma_IV_1"><b>[IV 1]</b> Detto che cosi hebbe il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> per picciolo spatio fermatosi, et poscia passare ad altro volendo,<a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">mio Fratello</a> cosi prese a dire.</div>
+                    <div class="comma" id="comma_IV_2"><b>[IV 2]</b> <span class="dialogue" data-who="CB" data-towhom="GM">Egli non si pare che cosi sia <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a>, come voi dite; che nella .I. tutti i nomi del maschio forniscano; i-quali nel numero del piu si mandan fuori, almeno <span class=" tooltip-container" data-ana="prep-art-pm">ne<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: conciosia cosa che si legga <br/><q class="block" data-bibl="bibl_02c">Togliendo gli-animá, che sono in terra:</q></div>
+                    <div class="comma" data-number="comma_IV_3"><b>[IV 3]</b> et anchora, <q class="block" data-bibl="bibl_03a">Che v'eran di lacciuó forme si nove</q>: dove si vede, che Animá et Lacciuó sono voci del numero del piu: et nondimeno nella .I. non forniscono.</div>
+                    <div class="comma" dara-number="comma_IV_4"><b>[IV 4]</b> Et similmente in ogni poeta ve ne sono dell'altre, et in questi medesimi altresì.</div>
+                    <div class="comma" data-number="comma_IV_5"><b>[IV 5]</b> Dunque a ffine che <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M.Hercole</a> a questi versi, o ad altri a questi simili avenendosi non istea sospeso; scioglietegli questo picciol dubbio, et fategliele chiaro.</span></div>
+                    <div class="comma" data-number="comma_IV_6"><b>[IV 6]</b> Per-che il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> a queste parole rispondendo cosi disse.</div>
+                    <div class="comma" data-number="comma_IV_7"><b>[IV 7]</b> Queste voci <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M. Hercole</a>, che hora il <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">Bembo</a> da <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a> et dal <a class="persname" id="FP" data-label="Francesco Petrarca" data-authority="http://viaf.org/viaf/39382430">Petrarcha</a> ci-arreca; voci intere non sono: anzi son fatte tali dalla li <span class="page-number">[55r]</span> cenza <span class="omograph tooltip-container" data-ana="prep_art_pm">de<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: La-quale da questa parte nondimeno è leggiera: Che il tor via di loro le due ultime lettere niuna disparutezza si vede che genera: et peraventura direbbe alcuno, che vi si giugne et accresce vaghezza così facendo.</div>
+                    <div class="comma" data-number="comma_IV_8"><b>[IV 8]</b> Et io vi ragionava delle intere; che in queste due, <span class="sample-words">Animali</span> et <span class="sample-words">Lacciuoli</span> sono: delle quali le due ultime lettere sono si deboli; che poco perdono, se pure non acquistano, le dette voci da questo canto.</div>
+                    <div class="comma" data-number="comma_IV_9"><b>[IV 9]</b> Et sono tuttavia di quelli; che nella scrittura niente voglioono che si lievi di loro: anzi si lascino intere: quantunque poscia leggendo il verso cosi le mandan fuori; come voi fatte havete.</div>
+                    <div class="comma" data-id="comma_IV_10"><b>[IV 10]</b> Il-che si fa medesimamente in quelle voci; che con tre vocali finiscono: le-quali tutte interamente si scrivono; et nondimeno alle volte si leggono et proferiscono non intere; <span class="variant substantial omission" data-id="chap4_com10_E1" title="Rendered from TEI &lt;rdg&gt; element">  </span></div>
+                    <div class="comma" data-number="comma_IV_11"><b>[IV 11]</b> <q class="block" data-bibl="bibl_02d">Non era vinto anchora monte Malo<br/>Dal nostro uccellatoio; che <span class="chap4_com11_E2">com'è</span> vinto<br/>Nel montar su, cosi sara nel calo.</q><br/> et anchora,</div>
+                    <div class="comma" data-number="comma_IV_12"><b>[IV 12]</b> <span class="variant substantial" data-id="chap4_com12_E1"><q class="block" data-bibl="bibl_02e">Lasciala tal, che di qui a mill'anni<br/>Ne lo stato primaio non si rinselva.</q></span> Ne solo <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a>; ma gli-altri Thoscani poeti anchora questa licenza si presero in altre cosi fatte voci.</span></div>
+                    <div class="comma" data-number="comma_IV_13"><b>[IV 13]</b> <span class="dialogue">Niuna licentia</span>, disse allhora a ccio framettendosi <a class="persname" data-label="Federigo Fregoso" id="FF" data-authority="http://viaf.org/viaf/24522590">M. Federigo</a>. <span class="dialogue">che nuova fosse, si presero i vostri poeti <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a> nel cosi fare, come havete detto.</span></div>
+                    <div class="comma" data-number="comma_IV_14"><b>[IV 14]</b> <span class="dialogue">Percioche vie di lor prima i Provenzali cosi facevano: che <span class="sample-words">Gioia</span>, <span class="sample-words">Noia</span> essi senza la vocale ultima scriveano; et d'una sillaba essere la ne facevano.</span></div>
+                    <div class="comma" data-number="comma_IV_15"><b>[IV 15]</b> <span class="dialogue">Et cio usavano in quelle voci; che da noi con le tre vocali nella detta guisa favellando si mandan fuori.</span></div>
+                    <div class="comma" data-number="comma_IV_16"><b>[IV 16]</b> Il-che da essi togliendo, si come da loro maestri, disse <a class="persname" id="LdU" data-label="Lupo degli Uberti" data-authority="https://viaf.org/en/viaf/126170858621407682138">Lupo</a> de gli-Uberti in un verso <span class="page-number">[55v]</span> rotto delle sue canzoni cosi, <q class="block" data-bibl="bibl_04a">Ch'altra gioia non m'è cara</q></div>
+                    <div class="comma" data-number="comma_IV_17"><b>[IV 17]</b><span class="dialogue">et il <a class="persname" id="RE" data-label="Enzo di Sardegna" data-authority="https://viaf.org/en/viaf/103146094161100330582">Re Enzo</a> in un'altro, <q class="block" data-bibl="bibl_05a">Per meo servir non veggio<br/>Che gioia mi se n'accresca<br/></q></span></span></div>
+                    <div class="comma" data-number="comma_IV_18"><b>[IV 18]</b> et il <a class="persname" id="GB" data-label="Giovanni Boccaccio" data-authority="http://viaf.org/viaf/64002165">Boccaccio</a> in uno intero delle sue ballate medesimamente cosi, <q class="block" data-bibl="bibl_01c">Onde'l viver m'è noia; <span class="omograph tooltip-container" data-ana="conj">ne<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> so morire.</q></div>
+                    <div class="comma" data-number="comma_IV_19"><b>[IV 19]</b> <span class="dialogue">Et dell'altre voci anchora  dissero i nostri poeti di questa maniera, <q class="block" data-bibl="bibl_06a">Ecco Cin da Pistoia, Guitton d'Arezzo,</q> et simili.</span> Et questo detto si tacque.</div>
+                    <div></div>
+                  </div>
+                </div>
+                <div class="p-to-t col-4 col-ed d-none" id="T">
+                  <!--witness overlay-->
+                  <div class="witness-overlay" data-wit="T">
+                    <button class="close-overlay" aria-label="Close overlay">×</button>
+                    <h1>About the witness</h1>
+                    <h2>Identifier</h2>
+                    <ul>
+                      <li>Settlement: Cremona</li>
+                      <li>Repository: Biblioteca Statale di Cremona</li>
+                      <li>Idno: FA Ac.1.41</li>
+                      <li>Name: T</li>
+                    </ul>
+                    <!-- <h2>Content</h2>
+                    <ul>
+                      <li>Locus: 101-111</li>
+                      <li>Analytic title: DI MESSER PIETRO BEMBO A MONSIGNORE MESSER GIULIO CARDINALE DE MEDICI DELLA VOLGAR LINGUA. TERZO LIBRO.</li>
+                    </ul> -->
+                  </div>
+                  <div class="container-fluid d-flex justify-content-between printed-control">
+                    <a title="single view not available" class="disabled">Single view</a>
+                    <div><a class="wit-info" data-wit="T">About the witness</a></div>
+                    </div>
+                    <div class="chapter" id="chapter_4">
+                    <div class="comma" id="comma_IV_1"><b>[IV 1]</b> Detto che cosi hebbe il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> per picciolo spatio fermatosi, et poscia passare ad altro volendo,<a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">mio Fratello</a> cosi prese a dire.</div>
+                    <div class="comma" id="comma_IV_2"><b>[IV 2]</b> <span class="dialogue" data-who="CB" data-towhom="GM">Egli non si pare che cosi sia <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a>, come voi dite; che nella .I. tutti i nomi del maschio forniscano; i-quali nel numero del piu si mandan fuori, almeno <span class="omograph tooltip-container" data-ana="prep-art-pm">ne<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: conciosia cosa che <span class="variant substantial" data-id="chap4_com2_E3" title="Rendered from TEI &lt;rdg&gt; element">si legge</span> <br/><q class="block" data-bibl="bibl_02c">Togliendo gli-animá, che sono in terra:</q></div>
+                    <div class="comma" data-number="comma_IV_3"><b>[IV 3]</b> et anchora, <q class="block" data-bibl="bibl_03a">Che v'eran di lacciuó forme si nove</q>: dove si vede, che Animá et Lacciuó sono voci del numero del piu: et nondimeno nella .I. non forniscono.</div>
+                    <div class="comma" dara-number="comma_IV_4"><b>[IV 4]</b> Et similmente in ogni poeta ve ne sono dell'altre, et in questi medesimi altresì.</div>
+                    <div class="comma" data-number="comma_IV_5"><b>[IV 5]</b> Dunque a ffine che <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M.Hercole</a> a questi versi, o ad altri a questi simili avenendosi non istea sospeso; scioglietegli questo picciol dubbio, et fategliele chiaro.</span></div>
+                    <div class="comma" data-number="comma_IV_6"><b>[IV 6]</b> Per-che il <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Magnifico</a> a queste parole rispondendo cosi disse.</div>
+                    <div class="comma" data-number="comma_IV_7"><b>[IV 7]</b> Queste voci <a class="persname" id="ES" data-label="Ercole Strozzi" data-authority="https://viaf.org/en/viaf/120786217">M. Hercole</a>, <span class="variant substantial" data-id="chap4_com7_E1" title="Rendered from TEI &lt;rdg&gt; element">che hora il <a class="persname" id="CB" data-label="Carlo Bembo" data-authority="https://www.wikidata.org/wiki/Q3659058">Bembo</a> da <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a> et dal <a class="persname" id="FP" data-label="Francesco Petrarca" data-authority="http://viaf.org/viaf/39382430">Petrarcha</a> ci reca;</span> <span class="page-number">[107]</span> voci intere non sono: anzi son fatte tali dalla licenza <span class="omograph tooltip-container" data-ana="prep_art_pm">de<span class="tooltip-text">PoS:Complex preposition, Number: Plural, Grammatical Gender: Masculine</span></span> poeti: La-quale da questa parte nondimeno è leggiera: Che il tor via di loro le due ultime lettere niuna disparutezza si vede che genera: et peraventura direbbe alcuno, che vi si giugne et accresce vaghezza così facendo.</div>
+                    <div class="comma" data-number="comma_IV_8"><b>[IV 8]</b> Et io vi ragionava delle intere; che in queste due, <span class="sample-words">Animali</span> et <span class="sample-words">Lacciuoli</span> sono: delle quali le due ultime lettere sono si deboli; che poco perdono, se pure non acquistano, le dette voci da questo canto.</div>
+                    <div class="comma" data-number="comma_IV_9"><b>[IV 9]</b> Et sono tuttavia di quelli; che nella scrittura niente voglioono che si lievi di loro: anzi si lascino intere: quantunque poscia leggendo il verso cosi le mandan fuori; come voi fatte havete.</div>
+                    <div class="comma" data-id="comma_IV_10"><b>[IV 10]</b> Il-che si fa medesimamente in quelle voci; che con tre vocali finiscono: le-quali tutte interamente si scrivono; et nondimeno alle volte si leggono et proferiscono non intere; <span class="variant substantial omission" data-id="chap4_com10_E1" title="Rendered from TEI &lt;rdg&gt; element">  </span></div>
+                    <div class="comma" data-number="comma_IV_11"><b>[IV 11]</b> <q class="block" data-bibl="bibl_02d">Non era vinto anchora monte Malo<br/>Dal nostro uccellatoio; che <span class="chap4_com11_E2">com'è</span> vinto<br/>Nel montar su, cosi sara nel calo.</q><br/> et anchora,</div>
+                    <div class="comma" data-number="comma_IV_12"><b>[IV 12]</b> <span class="variant substantial" data-id="chap4_com12_E1"><q class="block" data-bibl="bibl_02e">Lasciala tal, che di qui a mill'anni<br/>Ne lo stato primaio non si rinselva.</q></span> Ne solo <a class="persname" id="DA" data-label="Dante Alighieri" data-authority="http://viaf.org/viaf/97105654">Dante</a>; ma gli-altri Thoscani poeti anchora questa licenza si presero in altre cosi fatte voci.</span></div>
+                    <div class="comma" data-number="comma_IV_13"><b>[IV 13]</b> <span class="dialogue">Niuna licentia</span>, disse allhora a ccio framettendosi <a class="persname" data-label="Federigo Fregoso" id="FF" data-authority="http://viaf.org/viaf/24522590">M. Federigo</a>. <span class="dialogue">che nuova fosse, si presero i vostri poeti <a class="persname" id="GM" data-label="Giuliano de' Medici" data-authority="http://viaf.org/viaf/89074171">Giuliano</a> nel cosi fare, come havete detto.</span></div>
+                    <div class="comma" data-number="comma_IV_14"><b>[IV 14]</b> <span class="dialogue">Percioche vie di lor prima i Provenzali cosi facevano: che <span class="sample-words">Gioia</span>, <span class="sample-words">Noia</span> essi senza la vocale ultima scriveano; et d'una sillaba essere la ne facevano.</span></div>
+                    <div class="comma" data-number="comma_IV_15"><b>[IV 15]</b> <span class="dialogue">Et cio usavano in quelle voci; che da noi con le tre vocali nella detta guisa favellando si mandan fuori.</span></div>
+                    <div class="comma" data-number="comma_IV_16"><b>[IV 16]</b> Il-che da essi togliendo, si come da loro maestri, disse <a class="persname" id="LdU" data-label="Lupo degli Uberti" data-authority="https://viaf.org/en/viaf/126170858621407682138">Lupo</a> <span class="variant paragraphemic" data-id="chap4_com16_E1">de gli Uberti</span> in un ver <span class="page-number">[108]</span> so rotto delle sue canzoni cosi, <q class="block" data-bibl="bibl_04a">Ch'altra gioia non m'è cara</q></div>
+                    <div class="comma" data-number="comma_IV_17"><b>[IV 17]</b> <span class="dialogue">et il <a class="persname" id="RE" data-label="Enzo di Sardegna" data-authority="https://viaf.org/en/viaf/103146094161100330582">Re Enzo</a> in un'altro, <q class="block" data-bibl="bibl_05a">Per meo servir non veggio<br/>Che gioia mi se n'accresca<br/></q></span></span></div>
+                    <div class="comma" data-number="comma_IV_18"><b>[IV 18]</b> et il <a class="persname" id="GB" data-label="Giovanni Boccaccio" data-authority="http://viaf.org/viaf/64002165">Boccaccio</a> in uno intero delle sue ballate medesimamente cosi, <q class="block" data-bibl="bibl_01c">Onde'l viver m'è noia; <span class="omograph tooltip-container" data-ana="conj">ne<span class="tooltip-text">PoS: conjunction</span></span> so morire.</q></div>
+                    <div class="comma" data-number="comma_IV_19"><b>[IV 19]</b> <span class="dialogue">Et dell'altre voci anchora dissero i nostri poeti di questa maniera, <q class="block" data-bibl="bibl_06a">Ecco Cin da Pistoia, Guitton d'Arezzo,</q> et simili.</span> Et questo detto si tacque.</div>
+                    <div></div>
+                  </div>
+                </div>
+                <!--compare mode overlay-->
+                <!-- <div id="compare-overlay" class="container-fluid d-none">
+                  <div class="row container-fluid">
+                    <div class="col-6" id="comp-facsimiles"></div>
+                    <div class="col-6" id="comp-text">
+                      <select id="ms-var-ctrl" title="select a correction layer">
+                      <option value="base-draft">Base draft</option>
+                      <option value="revised-text">Revised text</option>
+                      <option value="final-text">Final text</option> -->
+                    </select> <!--base draft: quello che è variante rispetto a P senza mod all'interno e quello che è invariante rispetto a P senza mod all'interno --> <!--layer-final: il testo interno all'ultimo mod, l'invariante con o senza mod e la variante senza mod. si dovrebbe mostrare layer-final di default perchè il testo è genetico rispetto a P-->
+                    </div>
+                  </div>
+                </div>
+                <!--secondary nav: parag-control-->
+              <nav class="navbar navbar-expand-lg bg-body-tertiary parag-nav" id="control-nav">
+                <div class="row container-fluid">
+                  <div class="col-2">
+                    <button class="btn btn-sm" id="parag-var">Show paragraphemic variants</button>
+                  </div>
+                </div>
+              </nav>
+                <!--secondary nav: entities-legend-->
+              <nav class="navbar navbar-expand-lg bg-body-tertiary entities-legend-nav" id="control-nav">
+                <div class="row container-fluid">
+                  <div class="col-2">
+                    <button class="btn btn-sm" id="entities-btn">Highlight Entities</button>
+                  </div>
+                  <div class="col-2 d-flex justify-content-end">
+                    <button class="btn btn-sm" id="legend-btn" href="#"><a type="button" data-bs-toggle="modal" data-bs-target="#legend">Legend</a></button>
+                  </div>
+                </div>
+              </nav>
+    </main>
+
+
+    <!--modal-->
+    <div class="modal fade" id="instructions" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="instr-modal-title">Use the prototype</h1>
+      </div>
+      <div class="modal-body">
+        <p>This is a manually coded prototype for the Parallel view for Chapter 4 of <i>Prose</i>'s Third Book.</p>
+        <p>The prototype is meant to show key features the Parallel view, which is designed to support comparison between the text of the <i>princeps</i> and the other witnesses. For these reason, though visible on the interface, the Single View mode and the Lists are not available.</p>
+        <p>The buttons at the top allow to select the comparison between V and P or between P and the subsequent printed editions.</p>
+        <p>In the text box dedicated to manuscript Vat.lat.3210, the user can select a textual reconstruction from the dropdown at the top, which offers three possibilities: base draft, revision and final text.</p>
+        <p>Other features available in the prototype include:</p>
+        <li>Paragraphemic variants, which can be shown or hidden using the toggle button in the footer</li>
+        <li>Named Entities (at the current stage, only people mentioned in the dialogue), which can be highlighted via a button at the bottom of the page. Clicking on the name of the person displays tooltips with contextual information. The tooltip can be closed by clicking again on the name</li>
+        <li>Quotations, which are highlighted in yellow on hover. Clicking on a quotation opens a modal with the corresponding bibliographic reference.</li>
+        <li>A Legend, accessible via the bottom-right button, summarizes the chromatic and typographic markers, as detailed in the <a href="/dse_mockup.html" style="color:rgba(128, 128, 128, 0.8)">DSE mockup</a> section of the website.</li>
+
+        <p>Additionally, green asterisks (<span style="color: green">*</span>) have been used to signal omographs; a tooltip on hover shows information about the word.</p>
+
+        <p>Finally, for documentation purposes only, passages involved in substantial variants are provided with a label, which records the TEI elements processed for the textual reconstruction.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--modal-->
+    <div class="modal fade" id="quotations" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="instr-modal-title">Quotation</h1>
+      </div>
+      <div class="modal-body">
+        <p id="bibl-ref-modal"></p>
+        <p><a class="disabled" title="Lists not available">Go to Quoted Works index</a></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--modal-->
+    <div class="modal fade" id="legend" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-sm">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="instr-modal-title">Legend</h1>
+      </div>
+      <div class="modal-body">
+        <h5><b>Parallel view</b></h5>
+        <h6>Genetic level:</h6>
+        <ul>
+          <li><span class="elaboration">Elaboration</span></li>
+          <li><span class="deletion">Deletion</span></li>
+          <li><span class="addition">Addition</span></li>
+          <li><span class="transpo-within">Transposition</span></li>
+        </ul>
+        <h6>Textual level:</h6>
+        <ul>
+          <li><span class="substantial">Substantive variants</span></li>
+          <li><span style="color: rgb(142, 6, 6); font-weight: bold;">Paragraphemic variants</span></li>
+          <li><span class="omission">Omissions</span></li>
+          <li><span class="textual-add">Additions</span></li>
+          <li><span class="transpo-across">Transposition</span></li>
+        </ul>
+        <h6>Intratextual level:</h6>
+        <ul>
+          <li><span class="errata">Errata corrige</span></li>
+          <li><span class="stop-press">Stop-press corrections</span></li>
+        </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <!--bootstrap-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+      function openOffcanvas() {
+        offcanvas = document.getElementById("offcanvas-lists")
+        openOffcanvasLink = document.getElementById("toggle-lists")
+        offcanvas.classList.add("slide-in")
+        openOffcanvasLink.classList.add("d-none");
+      }
+
+      function closeOffcanvas() {
+        closeBtn = document.getElementById("close-offcanvas")
+        offcanvas = document.getElementById("offcanvas-lists")
+        openOffcanvasLink = document.getElementById("toggle-lists")
+        offcanvas.classList.remove("slide-in")
+        openOffcanvasLink.classList.remove("d-none");
+      }
+    </script>
+</body>
+</html>
